@@ -1,0 +1,18 @@
+.navList {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.navList li a {
+  text-decoration: none;
+   font-weight: bold;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
