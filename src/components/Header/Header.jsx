@@ -1,3 +1,4 @@
+import Button from "../Button/Button";
 import classes from "./Header.module.css";
 
 const Header = () => {
@@ -16,6 +17,7 @@ const Header = () => {
                 <li><a href="/services">Services</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/contact">Contact</a></li>
+                <li><Button>Order Now</Button></li>
             </ul>
         </nav>
     </header>
