@@ -10,30 +10,28 @@
 
 .navList li a {
   text-decoration: none;
-  color: #FFFAFA;
-   font-family: Inter;
-font-weight: 600;
-font-style: Semi Bold;
-font-size: 22px;
-position: relative;
-line-height: 100%;
-letter-spacing: 0%;
-
+  color: #fffafa;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 22px;
+  position: relative;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
-
 
 .navList li a:hover {
   background: var(--background-gradient);
   background-clip: text;
   color: transparent;
-  transition:  0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .navList li a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* space between text & underline */
+  bottom: -5px;
   width: 100%;
   height: 3px;
   background: var(--background-gradient);
@@ -42,7 +40,6 @@ letter-spacing: 0%;
   transition: transform 0.3s ease-in-out;
 }
 
-/* on hover show underline */
 .navList li a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
@@ -53,5 +50,3 @@ letter-spacing: 0%;
   width: auto;
   padding-left: 40px;
 }
-
-
