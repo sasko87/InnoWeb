@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
 header {
@@ -13,4 +14,23 @@ header {
   align-items: center;  font-size: 22px;
   font-weight: bold;
   color: #343a40;
+}
+
+h1 {
+      background: linear-gradient(90deg, #12AFEF, #7DE130);
+    
+      background-clip: text;
+      color: transparent;
+      text-align: center;
+      font-family: Poppins;
+      margin-bottom: 10px;
+    
+
+font-weight: 600;
+font-style: SemiBold;
+font-size: 85px;
+
+line-height: 95px;
+letter-spacing: -3%;
+
 }

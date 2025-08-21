@@ -1,0 +1,60 @@
+.hero {
+    display: flex;
+    flex: 1;
+
+    gap: 16px;
+    background-color: black;
+    height: 90vh;
+    
+    min-height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+
+}
+
+.heroLeftContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    color: #12AFEF;
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 26px;
+    margin-top: 10px;
+    line-height: 31px;
+    letter-spacing: 3%;
+
+}
+
+.textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw
+   
+}
+
+.HeroImageContainer {
+    align-self: flex-end;
+    text-align: right;
+    width: 50vw;
+}
+
+.heroCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 16px;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    
+}
