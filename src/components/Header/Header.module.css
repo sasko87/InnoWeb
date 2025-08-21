@@ -15,7 +15,7 @@
 font-weight: 600;
 font-style: Semi Bold;
 font-size: 22px;
-
+position: relative;
 line-height: 100%;
 letter-spacing: 0%;
 
@@ -27,6 +27,25 @@ letter-spacing: 0%;
   background-clip: text;
   color: transparent;
   transition:  0.3s ease-in-out;
+}
+
+.navList li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* space between text & underline */
+  width: 100%;
+  height: 3px;
+  background: var(--background-gradient);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* on hover show underline */
+.navList li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .logo {
