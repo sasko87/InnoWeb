@@ -4,6 +4,7 @@ import Card from "../Card/Card.jsx";
 import MaintainanceImg from "../../assets/maintainance.png";
 import MobileImg from "../../assets/mobile.png";
 import CustomDesignImg from "../../assets/custom-design.png";
+  import { motion } from "framer-motion";
 
 const Hero = () => {
   const heroCard = [
@@ -25,11 +26,26 @@ const Hero = () => {
     }
   ];
 
+
+
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 }
+};
+
+
   return (
-    <main className={classes.hero}>
+    <main 
+    variants={sectionVariants}
+      initial="hidden"
+      whileInView="visible"
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true, amount: 0.2 }}
+    
+      className={classes.hero}>
       <div className={classes.heroLeftContent}>
         <div className={classes.textContainer}>
-          <h1>
+          <h1 className={classes.typing}>
             Your Ideas, Our Code <br /> — Let’s Make It Real
           </h1>
           <p className={classes.description}>
@@ -44,9 +60,11 @@ const Hero = () => {
         </div>
       </div>
 
-      <picture className={classes.HeroImageContainer}>
+      <motion.picture initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6 }} className={classes.HeroImageContainer}>
         <img src={HeroImg} alt="Hero Image" />
-      </picture>
+      </motion.picture>
     </main>
   );
 };
