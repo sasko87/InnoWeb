@@ -46,6 +46,30 @@
   width: 32rem;
   height: 11rem;
   color: var(--secondary-color);
+  transition: transform 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.card:hover {
+  animation: sway 1s ease-in-out forwards;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-3deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .card .paragraphTwo {
