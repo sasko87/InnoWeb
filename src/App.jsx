@@ -1,20 +1,27 @@
-import Header from "./components/Header/Header"
-import Hero from "./components/Hero/Hero"
-
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import About from "./pages/About/About";
+// import Services from "./pages/Services/Services";
+// import Projects from "./pages/Projects/Projects";
+// import Contact from "./pages/Contact/Contact";
 
 function App() {
- 
-
   return (
-    <>
-    <div className="main-background">
-      <Header />
-      <Hero />
+    <Router>
+      <div className="main-background">
+        <Header />
 
-    </div>
-    </>
-  )
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/about" element={<About />} />
+          {/* <Route path="/services" element={<Services />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} /> */}
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
