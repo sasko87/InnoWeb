@@ -124,7 +124,7 @@ const About = () => {
           visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
         }}
       >
-        <motion.div className={classes.card} whileHover={{ scale: 1.05 }}>
+        <motion.div className={classes.card}>
           <p className={classes.paragraphOne}>Our Vision</p>
           <p className={classes.paragraphTwo}>
             To be a trusted partner for businesses seeking exceptional online
@@ -135,7 +135,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        <motion.div className={classes.card} whileHover={{ scale: 1.05 }}>
+        <motion.div className={classes.card}>
           <p className={classes.paragraphOne}>Our Mission</p>
           <p className={classes.paragraphTwo}>
             To deliver innovative, high-performance websites and web
