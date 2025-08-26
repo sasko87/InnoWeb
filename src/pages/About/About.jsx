@@ -128,7 +128,8 @@ const About = () => {
           <p className={classes.paragraphOne}>Our Vision</p>
           <p className={classes.paragraphTwo}>
             To be a trusted partner for businesses seeking exceptional online
-            presence and cutting-edge digital solutions. Every project is
+            presence and cutting-edge digital solutions. We believe in
+            collaboration, transparency, and quality. Every project is
             approached with creativity, technical precision, and a focus on the
             client's goals.
           </p>
@@ -183,6 +184,7 @@ const About = () => {
                 unique goals.
               </li>
               <li>24/7 Support – Always here when you need us.</li>
+              <li>Custom-built to fit your unique goals.</li>
               <li>
                 Fast Delivery – We meet deadlines without compromising quality.
               </li>
@@ -191,8 +193,8 @@ const About = () => {
                 solutions.
               </li>
               <li>
-                Cutting-Edge Technology – Latest tools and frameworks to stay
-                ahead.
+                Cutting-Edge Technology – We use the latest tools and frameworks
+                to keep your site ahead of the curve.
               </li>
               <li>
                 Long-Term Partnership – We’re here for the journey, not just the
