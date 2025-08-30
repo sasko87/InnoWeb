@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
@@ -12,7 +13,6 @@ function App() {
     <Router>
       <div className="main-background">
         <Header />
-
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
@@ -21,6 +21,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
