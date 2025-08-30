@@ -1,16 +1,43 @@
+:root {
+  --primary-color: #12afef;
+  --secondary-color: #7de130;
+  --background-gradient: conic-gradient(from 30.84deg at 43.8% 43.68%, #7DE130 0deg, #12AFEF 224.99deg, #7DE130 360deg);
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  box-sizing: border-box;
 }
 
 header {
-  background-color: #f8f9fa;
+  background-color: transparent;
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;  font-size: 22px;
+  align-items: center;
+  font-size: 22px;
   font-weight: bold;
   color: #343a40;
+}
+
+h1 {
+background: var(--background-gradient);
+
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-family: Poppins;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 90px;
+  line-height: 95px;
+  letter-spacing: -3%;
+}
+
+.main-background {
+  background-image: url(./assets/hero.jpg);
 }
