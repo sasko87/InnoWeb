@@ -8,28 +8,28 @@
 }
 
 .heading {
-  font-size: 45px;
-  font-weight: bold;
+  font-size: 4.5rem;
+  font-weight: 700;
   margin-bottom: 40px;
   letter-spacing: 1px;
   text-align: center;
-  background: linear-gradient(0deg, #12aeff 25%, #7de130 100%);
+  background: linear-gradient(90deg, #12afef 45%, #7de130 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  text-align: center;
 }
 
 .serviceCards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px;
-  width: 90%;
-  max-width: 1100px;
-  justify-items: center;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .serviceCards > :nth-child(5) {
-  grid-column: 1 / span 2;
+  grid-column: span 2;
   justify-self: center;
-  width: 600px;
+  width: 50%;
 }

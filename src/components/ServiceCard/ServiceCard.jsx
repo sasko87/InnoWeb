@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./ServiceCard.module.css";
+import classes from "./ServiceCard.module.css";
 
 const ServiceCard = ({ title, subtitle, description }) => {
   return (
-    <div className={styles.card}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.subtitle}>{subtitle}</p>
-      <p className={styles.description}>{description}</p>
+    <div className={classes.card}>
+      <h2 className={classes.title}>{title}</h2>
+      <p className={classes.subtitle}>{subtitle}</p>
+      <p className={classes.description}>{description}</p>
     </div>
   );
 };

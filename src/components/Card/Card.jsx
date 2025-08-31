@@ -1,15 +1,20 @@
+import React from "react";
 import classes from "./Card.module.css";
 
-const Card = ({image, title}) => {
+const Card = ({image, title, subtitle, description}) => {
     return (
-        <div className={classes.card}>
-            <div>
-                <img src={image} alt="Card Image" className={classes.cardImage} />
-            </div>
-            <div>
-                <h2 className={classes.cardTitle}>{title}</h2>
-            </div>
+          <div className={classes.card}>
+      {image && (
+        <div>
+          <img src={image} alt="Card" className={classes.cardImage} />
         </div>
+      )}
+      <div>
+        <h2 className={classes.cardTitle}>{title}</h2>
+        {subtitle && <p className={classes.subtitle}>{subtitle}</p>}
+        {description && <p className={classes.description}>{description}</p>}
+      </div>
+    </div>
     );
 };
 
