@@ -18,7 +18,7 @@ const Footer = () => {
         </div>
 
         <div className={classes.footerSection}>
-          <h2>Services</h2>
+          <h3>Services</h3>
           <ul>
             <li>Website Development</li>
             <li>Web Applications Development</li>
@@ -29,7 +29,7 @@ const Footer = () => {
         </div>
 
         <div className={classes.footerSection}>
-          <h2 className={classes.footerSectionTitle}>Get in Touch</h2>
+          <h3 className={classes.footerSectionTitle}>Get in Touch</h3>
           <span>
             <a href="mailto:support@yourcompany.com">
               Email: support@yourcompany.com
@@ -39,7 +39,9 @@ const Footer = () => {
             <a href="tel:+38970123456">Phone/WhatsApp: +389 70 123 456</a>
           </span>
           <div className={classes.social}>
-            <a href="/contact">Contact Page →</a>
+            <a className={classes.socialContact} href="/contact">
+              Contact Page →
+            </a>
             <p>Follow Us:</p>
             🌐
             <a
@@ -49,7 +51,7 @@ const Footer = () => {
             >
               Facebook
             </a>{" "}
-            |
+            <span className={classes.separator}> | </span>
             <a
               href="https://www.instagram.com/yourpage"
               target="_blank"
@@ -57,7 +59,7 @@ const Footer = () => {
             >
               Instagram
             </a>{" "}
-            |
+            <span className={classes.separator}> | </span>
             <a
               href="https://www.linkedin.com/company/yourpage"
               target="_blank"

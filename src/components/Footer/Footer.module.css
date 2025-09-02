@@ -33,6 +33,7 @@
 .footerSection {
   display: flex;
   flex-direction: column;
+  align-items: start;
   max-width: 24rem;
 }
 
@@ -40,9 +41,10 @@
   padding-bottom: 1.5rem;
 }
 
-.footerSection h2 {
+.footerSection h3 {
   color: var(--secondary-color);
-  margin-bottom: 1rem;
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
   margin-top: 4rem;
 }
 
@@ -71,13 +73,26 @@
 }
 
 .social {
-  color: var(--primary-color);
   font-size: 1.1rem;
   font-weight: 600;
 }
 
+.social p {
+  color: var(--primary-color);
+}
+
 .social a {
   color: var(--secondary-color);
+}
+
+.separator {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.socialContact {
+  display: flex;
+  justify-content: center;
 }
 
 .footerBottom {
