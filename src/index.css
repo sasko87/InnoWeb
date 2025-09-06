@@ -1,7 +1,12 @@
 :root {
   --primary-color: #12afef;
   --secondary-color: #7de130;
-  --background-gradient: conic-gradient(from 30.84deg at 43.8% 43.68%, #7DE130 0deg, #12AFEF 224.99deg, #7DE130 360deg);
+  --background-gradient: conic-gradient(
+    from 30.84deg at 43.8% 43.68%,
+    #7de130 0deg,
+    #12afef 224.99deg,
+    #7de130 360deg
+  );
 }
 
 body {
@@ -24,7 +29,7 @@ header {
 }
 
 h1 {
-background: var(--background-gradient);
+  background: var(--background-gradient);
 
   background-clip: text;
   color: transparent;

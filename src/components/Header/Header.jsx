@@ -13,7 +13,12 @@ const Header = () => {
       <header>
         <div>
           <a href="/">
-            <img src="/logo1.png" alt="InnoWeb Logo" className={classes.logo} />
+            {/* <img src="/logo1.png" alt="InnoWeb Logo" className={classes.logo} /> */}
+            <img
+              src="/logo.png"
+              alt="InnoWeb Logo"
+              className={classes.logoLogo}
+            />
           </a>
         </div>
 

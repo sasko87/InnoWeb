@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import classes from "./About.module.css";
-// import ParallaxBanner from "../../components/Parallax/ParallaxBanner";
+import ParallaxBanner from "../../components/Parallax/ParallaxBanner";
 
 const About = () => {
   return (
