@@ -1,7 +1,6 @@
 import React from "react";
 import { ParallaxBanner as Banner, Parallax } from "react-scroll-parallax";
 
-
 export default function ParallaxBannerSection({
   bg,
   height = "h-[100vh]",
