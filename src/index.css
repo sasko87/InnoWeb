@@ -18,8 +18,11 @@ body {
 }
 
 header {
-  background-color: transparent;
-  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: black;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
