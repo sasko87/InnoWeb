@@ -8,11 +8,21 @@ import Pricing from "../Pricing/Pricing";
 const HomePage = () => {
   return (
     <div>
-      <Hero />
-      <OurServices />
-      <Projects />
-      <About />
-      <Pricing />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="services">
+        <OurServices />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="pricing">
+        <Pricing />
+      </section>
     </div>
   );
 };

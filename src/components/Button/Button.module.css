@@ -1,17 +1,14 @@
 .mainButton {
-  width: 208px;
-  height: 54px;
-
+  width: 12rem;
+  height: 3rem;
   border-radius: 15px;
-  padding-top: 15px;
-  padding-right: 52px;
-  padding-bottom: 15px;
-  padding-left: 52px;
+  padding: 0 2rem;
   gap: 10px;
   background: linear-gradient(90deg, #12afef 0%, #7de130 100%);
+  color: black;
   font-family: Inter;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 1.5rem;
   line-height: 100%;
   letter-spacing: 0%;
 }
