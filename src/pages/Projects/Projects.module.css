@@ -35,6 +35,8 @@
   flex-shrink: 0;
   scroll-snap-align: center;
   min-width: 100%;
+
+  justify-content: center;
 }
 
 .column {

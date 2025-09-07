@@ -7,6 +7,7 @@ import Services from "./pages/Services/OurServices";
 import Projects from "./pages/Projects/Projects";
 import Pricing from "./pages/Pricing/Pricing";
 import Contact from "./pages/Contact/Contact";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   return (
@@ -14,13 +15,14 @@ function App() {
       <div className="main-background">
         <Header />
         <Routes>
-          <Route path="/" element={<Hero />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+
         <Footer />
       </div>
     </Router>
