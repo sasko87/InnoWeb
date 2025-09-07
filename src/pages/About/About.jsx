@@ -9,7 +9,7 @@ const About = () => {
       <motion.h2
         className={classes.subTitle}
         initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         About Us
