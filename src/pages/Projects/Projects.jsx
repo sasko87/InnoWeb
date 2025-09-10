@@ -17,6 +17,7 @@ const projectLinks = {
   "project5.png": "https://chat.stevkovski.xyz/login",
   "project6.png": "https://ecommercewebsite-flame.vercel.app/",
   "project7.png": "https://ecommercewebsite-flame.vercel.app/",
+  "project8.png": "https://mentor-token.stevkovski.xyz/",
 };
 
 const itemVariants = {
