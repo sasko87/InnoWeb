@@ -23,6 +23,8 @@ const projectLinks = {
   "project12.png": "https://wvp.mk/index.html",
   "project13.png": "https://stevkovski.xyz/",
   "project14.png": "https://chat.stevkovski.xyz/login",
+  "project15.png": "https://ecommercewebsite-flame.vercel.app/",
+  "project16.png": "https://ecommercewebsite-flame.vercel.app/",
 };
 
 const itemVariants = {
