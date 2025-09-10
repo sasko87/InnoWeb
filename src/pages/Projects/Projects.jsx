@@ -15,16 +15,8 @@ const projectLinks = {
   "project3.png": "https://baumarket.mk",
   "project4.png": "https://stevkovski.xyz/",
   "project5.png": "https://chat.stevkovski.xyz/login",
-  "project6.png": "https://baumarket.mk",
-  "project7.png": "https://mat-trans-9vap.vercel.app/",
-  "project8.png": "https://baumarket.mk",
-  "project9.png": "https://mat-trans-9vap.vercel.app/",
-  "project10.png": "https://baumarket.mk",
-  "project12.png": "https://wvp.mk/index.html",
-  "project13.png": "https://stevkovski.xyz/",
-  "project14.png": "https://chat.stevkovski.xyz/login",
-  "project15.png": "https://ecommercewebsite-flame.vercel.app/",
-  "project16.png": "https://ecommercewebsite-flame.vercel.app/",
+  "project6.png": "https://ecommercewebsite-flame.vercel.app/",
+  "project7.png": "https://ecommercewebsite-flame.vercel.app/",
 };
 
 const itemVariants = {
