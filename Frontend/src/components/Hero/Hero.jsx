@@ -45,14 +45,26 @@ const Hero = () => {
           <h1 className={classes.typing}>
             Your Ideas, Our Code <br /> — Let’s Make It Real
           </h1>
-          <p className={classes.description}>
+          <motion.p
+            className={classes.description}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
             From concept to launch, we craft websites that are
             <br /> fast, functional, and designed to convert.
-          </p>
+          </motion.p>
         </div>
         <div className={classes.heroCardsContainer}>
           {heroCard.map((card, index) => (
-            <Card key={index} image={card.image} title={card.title} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.2 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }} // stagger effect
+            >
+              <Card image={card.image} title={card.title} />
+            </motion.div>
           ))}
         </div>
       </div>
@@ -60,7 +72,7 @@ const Hero = () => {
       <motion.picture
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8, delay: 1.2 }}
         className={classes.HeroImageContainer}
       >
         <img src={HeroImg} alt="Hero Image" />
