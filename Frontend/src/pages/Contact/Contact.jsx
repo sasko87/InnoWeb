@@ -129,10 +129,10 @@ const ContactPage = () => {
             <option>Website Development BASIC</option>
             <option>Website Development PRO</option>
             <option>Website Development PREMIUM</option>
-            <option>Web Application</option>
-            <option>Maintenance</option>
+            <option>Web Application PREMIUM</option>
+            <option>Maintenance PREMIUM</option>
             <option>SEO Optimization</option>
-            <option>Custom Design</option>
+            <option>Custom Design PREMIUM</option>
             <option>Other</option>
           </select>
         </label>
