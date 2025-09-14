@@ -98,9 +98,10 @@ const Projects = () => {
             viewport={{ once: true, amount: 0.3 }}
           >
             <div className={classes.column}>
-              {block[0] && (
+              {block.slice(0, 2).map((item, idx) => (
                 <a
-                  href={block[0].url}
+                  key={idx}
+                  href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.monitorWrapper}
@@ -108,10 +109,7 @@ const Projects = () => {
                   <motion.div
                     className={classes.monitorContent}
                     variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
                     custom="left"
-                    viewport={{ once: true, amount: 0.3 }}
                     whileHover={{
                       scale: 1.1,
                       rotateX: -5,
@@ -129,57 +127,20 @@ const Projects = () => {
                       className={classes.monitorFrame}
                     />
                     <img
-                      src={block[0].img}
+                      src={item.img}
                       alt="project"
                       className={classes.projectInside}
                     />
                   </motion.div>
                 </a>
-              )}
-              {block[1] && (
-                <a
-                  href={block[1].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.monitorWrapper}
-                >
-                  <motion.div
-                    className={classes.monitorContent}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    custom="left"
-                    viewport={{ once: true, amount: 0.3 }}
-                    whileHover={{
-                      scale: 1.1,
-                      rotateX: -5,
-                      rotateY: 25,
-                      transition: {
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 15,
-                      },
-                    }}
-                  >
-                    <img
-                      src={monitor}
-                      alt="Monitor"
-                      className={classes.monitorFrame}
-                    />
-                    <img
-                      src={block[1].img}
-                      alt="project"
-                      className={classes.projectInside}
-                    />
-                  </motion.div>
-                </a>
-              )}
+              ))}
             </div>
 
             <div className={`${classes.column} ${classes.centerColumn}`}>
-              {block[2] && (
+              {block.slice(2, 4).map((item, idx) => (
                 <a
-                  href={block[2].url}
+                  key={idx}
+                  href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.monitorWrapper}
@@ -187,10 +148,7 @@ const Projects = () => {
                   <motion.div
                     className={classes.monitorContent}
                     variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
                     custom="center"
-                    viewport={{ once: true, amount: 0.3 }}
                     whileHover={{
                       scale: 1.1,
                       rotateX: -5,
@@ -208,57 +166,20 @@ const Projects = () => {
                       className={classes.monitorFrame}
                     />
                     <img
-                      src={block[2].img}
+                      src={item.img}
                       alt="project"
                       className={classes.projectInside}
                     />
                   </motion.div>
                 </a>
-              )}
-              {block[3] && (
-                <a
-                  href={block[3].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.monitorWrapper}
-                >
-                  <motion.div
-                    className={classes.monitorContent}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    custom="center"
-                    viewport={{ once: true, amount: 0.3 }}
-                    whileHover={{
-                      scale: 1.1,
-                      rotateX: -5,
-                      rotateY: 0,
-                      transition: {
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 15,
-                      },
-                    }}
-                  >
-                    <img
-                      src={monitor}
-                      alt="Monitor"
-                      className={classes.monitorFrame}
-                    />
-                    <img
-                      src={block[3].img}
-                      alt="project"
-                      className={classes.projectInside}
-                    />
-                  </motion.div>
-                </a>
-              )}
+              ))}
             </div>
 
             <div className={classes.column}>
-              {block[4] && (
+              {block.slice(4, 6).map((item, idx) => (
                 <a
-                  href={block[4].url}
+                  key={idx}
+                  href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={classes.monitorWrapper}
@@ -266,10 +187,7 @@ const Projects = () => {
                   <motion.div
                     className={classes.monitorContent}
                     variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
                     custom="right"
-                    viewport={{ once: true, amount: 0.3 }}
                     whileHover={{
                       scale: 1.1,
                       rotateX: -5,
@@ -287,51 +205,13 @@ const Projects = () => {
                       className={classes.monitorFrame}
                     />
                     <img
-                      src={block[4].img}
+                      src={item.img}
                       alt="project"
                       className={classes.projectInside}
                     />
                   </motion.div>
                 </a>
-              )}
-              {block[5] && (
-                <a
-                  href={block[5].url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={classes.monitorWrapper}
-                >
-                  <motion.div
-                    className={classes.monitorContent}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    custom="right"
-                    viewport={{ once: true, amount: 0.3 }}
-                    whileHover={{
-                      scale: 1.1,
-                      rotateX: -5,
-                      rotateY: -25,
-                      transition: {
-                        type: "spring",
-                        stiffness: 200,
-                        damping: 15,
-                      },
-                    }}
-                  >
-                    <img
-                      src={monitor}
-                      alt="Monitor"
-                      className={classes.monitorFrame}
-                    />
-                    <img
-                      src={block[5].img}
-                      alt="project"
-                      className={classes.projectInside}
-                    />
-                  </motion.div>
-                </a>
-              )}
+              ))}
             </div>
           </motion.div>
         ))}
