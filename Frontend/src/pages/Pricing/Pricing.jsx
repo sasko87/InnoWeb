@@ -5,7 +5,7 @@ import classes from "./Pricing.module.css";
 
 const plans = [
   {
-    category: "Website development",
+    category: "Website Development",
     title: "Basic",
     features: [
       "Single-language version",
@@ -19,7 +19,7 @@ const plans = [
     price: "12.000 MKD",
   },
   {
-    category: "Website development",
+    category: "Website Development",
     title: "PRO",
     features: [
       "Bilingual version",
@@ -33,7 +33,7 @@ const plans = [
     price: "15.000 MKD",
   },
   {
-    category: "Website development",
+    category: "Website Development",
     title: "PREMIUM",
     features: [
       "Multilingual version",

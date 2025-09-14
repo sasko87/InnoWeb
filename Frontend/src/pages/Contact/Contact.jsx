@@ -1,32 +1,73 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Contact.module.css";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import Button from "../../components/Button/Button";
 
 const ContactPage = () => {
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const serviceFromUrl = queryParams.get("service");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    service: "Website Development",
+    service: serviceFromUrl || "",
     message: "",
   });
+  const [serverMessage, setServerMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form submitted:", formData);
+  //   alert("Thank you for contacting us! We will get back to you soon.");
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     service: "Website Development",
+  //     message: "",
+  //   });
+  // };
+
+  const submitMessage = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for contacting us! We will get back to you soon.");
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "Website Development",
-      message: "",
-    });
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:3000/api/send-mail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setServerMessage(data.message);
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "Website Development",
+          message: "",
+        });
+      } else {
+        setLoading(true);
+        setServerMessage(data.error);
+      }
+    } catch {
+      setServerMessage("Something went wrong. Please try again in a moment.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -44,8 +85,7 @@ const ContactPage = () => {
         purchase an existing solution, our team is ready to help.
       </p>
 
-      
-      <form className={classes.form} onSubmit={handleSubmit}>
+      <form className={classes.form} onSubmit={submitMessage}>
         <label>
           Name:
           <input
@@ -84,8 +124,11 @@ const ContactPage = () => {
             name="service"
             value={formData.service}
             onChange={handleChange}
+            disabled={!!serviceFromUrl}
           >
-            <option>Website Development</option>
+            <option>Website Development BASIC</option>
+            <option>Website Development PRO</option>
+            <option>Website Development PREMIUM</option>
             <option>Web Application</option>
             <option>Maintenance</option>
             <option>SEO Optimization</option>
@@ -103,10 +146,13 @@ const ContactPage = () => {
             required
           />
         </label>
-
-        <button type="submit">Submit</button>
+        {serverMessage && <p>{serverMessage}</p>}
+        <button type="submit" style={{ width: "100%" }}>
+          {loading ? "Sending" : "Submit"}
+        </button>
+        {/* <button type="submit">{loading ? "Sending" : "Submit"}</button> */}
       </form>
-      
+
       <div className={classes.info}>
         <p>
           <strong>Email:</strong> contact@yourcompany.com
@@ -121,9 +167,7 @@ const ContactPage = () => {
           <strong>Business Hours:</strong> 24/7{" "}
         </p>
       </div>
-
     </div>
-    
   );
 };
 

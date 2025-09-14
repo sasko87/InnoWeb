@@ -2,8 +2,15 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "../Button/Button";
 import classes from "./PricingCard.module.css";
+import { useNavigate } from "react-router-dom";
 
 const PricingCard = ({ category, title, features, price }) => {
+  const navigate = useNavigate();
+
+  const handleOrderClick = () => {
+    const service = `${category} ${title}`;
+    navigate(`contact?service=${encodeURIComponent(service)}`);
+  };
   return (
     <motion.div
       className={classes.card}
@@ -22,7 +29,7 @@ const PricingCard = ({ category, title, features, price }) => {
       </ul>
       <div className={classes.price}>{price}</div>
       <div className={classes.button}>
-        <Button>Order Now</Button>
+        <Button onClick={handleOrderClick}>Order Now</Button>
       </div>
     </motion.div>
   );
