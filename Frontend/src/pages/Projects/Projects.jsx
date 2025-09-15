@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import classes from "./Projects.module.css";
 import monitor from "../../assets/monitor.png";
+import { useTranslation } from "react-i18next";
 
 const projectImages = import.meta.glob(
   "../../assets/projects/*.{jpg,jpeg,png}",
@@ -39,6 +40,7 @@ const itemVariants = {
 };
 
 const Projects = () => {
+  const { t } = useTranslation();
   const projects = Object.values(projectImages).map((imgObj) => {
     const img = imgObj.default;
     const fileName = img.split("/").pop().split("?")[0];
@@ -74,7 +76,7 @@ const Projects = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Our Projects
+        {t("projects.title")}
       </motion.h2>
 
       <div
