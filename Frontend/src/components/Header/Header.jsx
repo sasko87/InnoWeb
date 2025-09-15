@@ -55,17 +55,20 @@ import { useEffect, useState } from "react";
 import Button from "../Button/Button";
 import { scroller } from "react-scroll";
 import { Link as RouterLink, useNavigate, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import classes from "./Header.module.css";
 
 const sections = [
-  { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "services", label: "Services" },
-  { id: "projects", label: "Projects" },
-  { id: "pricing", label: "Pricing" },
+  { id: "hero", key: "nav.home" },
+  { id: "about", key: "nav.about" },
+  { id: "services", key: "nav.services" },
+  { id: "projects", key: "nav.projects" },
+  { id: "pricing", key: "nav.pricing" },
 ];
 
 const Header = () => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
   const [active, setActive] = useState("hero");
@@ -120,7 +123,7 @@ const Header = () => {
 
       <nav>
         <ul className={classes.navList}>
-          {sections.map(({ id, label }) => (
+          {sections.map(({ id, key }) => (
             <li key={id}>
               <a
                 href={`/#${id}`}
@@ -129,7 +132,7 @@ const Header = () => {
                 }`}
                 onClick={(e) => handleClick(id, e)}
               >
-                {label}
+                {t(key)}
               </a>
             </li>
           ))}
@@ -140,13 +143,16 @@ const Header = () => {
                 active === "contact" ? classes.active : ""
               }`}
             >
-              Contact
+              {t("nav.contact")}
             </RouterLink>
           </li>
           <li>
             <Button onClick={(e) => handleClick("pricing", e)}>
-              Order Now
+              {t("nav.order")}
             </Button>
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
       </nav>

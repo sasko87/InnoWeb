@@ -3,9 +3,11 @@ import { motion } from "framer-motion";
 import Button from "../Button/Button";
 import classes from "./PricingCard.module.css";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const PricingCard = ({ category, title, features, price }) => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   const handleOrderClick = () => {
     const service = `${category} ${title}`;
@@ -29,7 +31,7 @@ const PricingCard = ({ category, title, features, price }) => {
       </ul>
       <div className={classes.price}>{price}</div>
       <div className={classes.button}>
-        <Button onClick={handleOrderClick}>Order Now</Button>
+        <Button onClick={handleOrderClick}> {t("nav.order")}</Button>
       </div>
     </motion.div>
   );
