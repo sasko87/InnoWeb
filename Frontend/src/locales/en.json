@@ -49,5 +49,34 @@
         "description": "We provide regular technical maintenance, security updates, and upgrades to ensure uninterrupted performance of your website or application."
       }
     }
+  },
+  "projects": {
+    "title": "Our Projects"
+  },
+  "about": {
+    "title": "About Us",
+    "tagline": "Driven by innovation, powered by expertise",
+    "description": "We are a passionate team of designers, developers, and digital strategists dedicated to creating web solutions that help businesses thrive in the digital age.",
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be a trusted partner for businesses seeking exceptional online presence and cutting-edge digital solutions. We believe in collaboration, transparency, and quality. Every project is approached with creativity, technical precision, and a focus on the client's goals."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To deliver innovative, high-performance websites and web applications that empower our clients to grow and succeed."
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "subtitle": "Your success is our priority",
+      "text": "We combine expertise, creativity, and a client-first mindset to ensure you get more than just a website — you get a solution that works for your business.",
+      "points": [
+        "Tailored Solutions – Every project is custom-built to fit your unique goals.",
+        "24/7 Support – Always here when you need us.",
+        "Fast Delivery – We meet deadlines without compromising quality.",
+        "Proven Reliability – Secure, optimized, and scalable web solutions.",
+        "Cutting-Edge Technology – We use the latest tools and frameworks to keep your site ahead of the curve.",
+        "Long-Term Partnership – We’re here for the journey, not just the launch."
+      ]
+    }
   }
 }
