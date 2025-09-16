@@ -123,3 +123,91 @@
   filter: brightness(0) saturate(100%) invert(38%) sepia(94%) saturate(2817%)
     hue-rotate(186deg) brightness(96%) contrast(95%);
 }
+
+/* постоечки стилови ... */
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .aboutContainer {
+    padding: 2rem 4rem;
+  }
+
+  .subTitle {
+    font-size: 3rem;
+  }
+
+  .paragraphOne {
+    font-size: 1.4rem;
+  }
+
+  .paragraphTwo {
+    font-size: 1rem;
+  }
+
+  .cards {
+    gap: 3rem;
+  }
+
+  .card {
+    width: 24rem;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .whyChooseUsContainer {
+    padding: 2rem 3rem;
+  }
+
+  .whyRight li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 2rem;
+  }
+
+  .subTitle {
+    font-size: 2.2rem;
+  }
+
+  .paragraphOne {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .paragraphTwo {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  .whyChooseUsContainer {
+    padding: 1.5rem;
+  }
+
+  .whyChooseUsContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .whyLeft,
+  .whyRight {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .whyRight li {
+    font-size: 0.95rem;
+  }
+}

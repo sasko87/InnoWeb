@@ -1,48 +1,54 @@
 import React from "react";
 import logoImg from "../../assets/logoImg.png";
 import classes from "./Footer.module.css";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer>
       <div className={classes.footerContainer}>
+        {/* Logo + Description */}
         <div className={classes.footerSectionLogo}>
           <a href="/">
             <img src={logoImg} alt="InnoWebLogo" className={classes.logo} />
           </a>
-          <p className={classes.footerDescription}>
-            We turn ideas into powerful, interactive digital experiences.
-            Whether it’s a sleek landing page or a complex web app, our code is
-            clean, our designs are sharp, and our results speak for themselves.
-          </p>
+          <p className={classes.footerDescription}>{t("footer.description")}</p>
         </div>
 
+        {/* Services */}
         <div className={classes.footerSection}>
-          <h3>Services</h3>
+          <h3>{t("footer.services.title")}</h3>
           <ul>
-            <li>Website Development</li>
-            <li>Web Applications Development</li>
-            <li>Maintenance</li>
-            <li>SEO Optimization</li>
-            <li>Custom Design</li>
+            {t("footer.services.list", { returnObjects: true }).map(
+              (service, idx) => (
+                <li key={idx}>{service}</li>
+              )
+            )}
           </ul>
         </div>
 
+        {/* Contact */}
         <div className={classes.footerSection}>
-          <h3 className={classes.footerSectionTitle}>Get in Touch</h3>
+          <h3 className={classes.footerSectionTitle}>
+            {t("footer.contact.title")}
+          </h3>
           <span>
             <a href="mailto:support@yourcompany.com">
-              Email: support@yourcompany.com
+              {t("footer.contact.email")}: support@yourcompany.com
             </a>
           </span>
           <span>
-            <a href="tel:+38970123456">Phone/WhatsApp: +389 70 123 456</a>
+            <a href="tel:+38970123456">
+              {t("footer.contact.phone")}: +389 70 123 456
+            </a>
           </span>
           <div className={classes.social}>
             <a className={classes.socialContact} href="/contact">
-              Contact Page →
+              {t("footer.contactPage")} →
             </a>
-            <p>Follow Us:</p>
+            <p>{t("footer.follow")}</p>
             🌐
             <a
               href="https://www.facebook.com/yourpage"
@@ -50,7 +56,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               Facebook
-            </a>{" "}
+            </a>
             <span className={classes.separator}> | </span>
             <a
               href="https://www.instagram.com/yourpage"
@@ -58,7 +64,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               Instagram
-            </a>{" "}
+            </a>
             <span className={classes.separator}> | </span>
             <a
               href="https://www.linkedin.com/company/yourpage"
@@ -70,7 +76,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className={classes.footerBottom}>InnoWeb – All rights reserved</p>
+
+      <p className={classes.footerBottom}>{t("footer.rights")}</p>
     </footer>
   );
 };

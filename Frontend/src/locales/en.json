@@ -78,5 +78,147 @@
         "Long-Term Partnership – We’re here for the journey, not just the launch."
       ]
     }
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "plans": [
+      {
+        "category": "Website Development",
+        "title": "Basic",
+        "features": [
+          "Single-language version",
+          "Up to 3 functions/links",
+          "Up to 20 photos, 1×A4 text",
+          "1 email address",
+          "Basic SEO optimization",
+          "Support Mon–Fri",
+          "Monthly visit statistics"
+        ],
+        "price": "12.000 MKD"
+      },
+      {
+        "category": "Website Development",
+        "title": "PRO",
+        "features": [
+          "Bilingual version",
+          "Up to 7 functions/links",
+          "Up to 40 photos, 3×A4 text",
+          "3 email addresses",
+          "Standard SEO optimization",
+          "Support Mon–Sat",
+          "Monthly visit statistics"
+        ],
+        "price": "15.000 MKD"
+      },
+      {
+        "category": "Website Development",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "by Agreement"
+      },
+      {
+        "category": "Web Application",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "by Agreement"
+      },
+      {
+        "category": "Maintenance",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "3000 MKD"
+      },
+      {
+        "category": "Custom Design",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "by Agreement"
+      }
+    ],
+    "note": "* All plans include 1 year of free maintenance, which covers technical updates, bug fixes, and minor adjustments to ensure everything runs smoothly after launch."
+  },
+  "footer": {
+    "description": "We turn ideas into powerful, interactive digital experiences. Whether it’s a sleek landing page or a complex web app, our code is clean, our designs are sharp, and our results speak for themselves.",
+    "services": {
+      "title": "Services",
+      "list": [
+        "Website Development",
+        "Web Applications Development",
+        "Maintenance",
+        "SEO Optimization",
+        "Custom Design"
+      ]
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "email": "Email",
+      "phone": "Phone/WhatsApp"
+    },
+    "contactPage": "Contact Page",
+    "follow": "Follow Us:",
+    "rights": "InnoWeb – All rights reserved"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Whether you’re looking to develop a new website, a mobile app, or purchase an existing solution, our team is ready to help.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service Required",
+      "message": "Message"
+    },
+    "optional": "Optional",
+    "services": [
+      "Website Development BASIC",
+      "Website Development PRO",
+      "Website Development PREMIUM",
+      "Web Application PREMIUM",
+      "Maintenance PREMIUM",
+      "SEO Optimization",
+      "Custom Design PREMIUM",
+      "Other"
+    ],
+    "submit": "Submit",
+    "sending": "Sending...",
+    "error": "Something went wrong. Please try again in a moment.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "hours": "Business Hours"
+    }
   }
 }
