@@ -1,8 +1,45 @@
+/* .footerDivider {
+  height: 3px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    var(--secondary-color),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: gradientMove 8s linear 2 forwards;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+} */
+
+.footerDivider {
+  height: 3px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary-color),
+    var(--secondary-color),
+    transparent
+  );
+}
+
 .footerContainer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
 }
 
 .footerSectionLogo {
@@ -97,7 +134,9 @@
 
 .footerBottom {
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+  margin: 0;
   font-size: 1rem;
   font-weight: 600;
   color: var(--secondary-color);
