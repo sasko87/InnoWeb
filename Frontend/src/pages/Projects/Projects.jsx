@@ -19,6 +19,7 @@ const projectLinks = {
   "project6.png": "https://ecommercewebsite-flame.vercel.app/",
   "project7.png": "https://ecommercewebsite-flame.vercel.app/",
   "project8.png": "https://mentor-token.stevkovski.xyz/",
+  "project9.png": "https://coffe-shop-sigma-seven.vercel.app/",
 };
 
 const itemVariants = {
