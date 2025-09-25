@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
 const app = express();
+const http = require("http");
+const { Server } = require("socket.io");
+const OpenAI = require("openai");
 
 require("dotenv").config();
 
@@ -39,6 +42,36 @@ const sendContactMail = async (req, res) => {
 };
 
 app.post("/api/send-mail", sendContactMail);
+
+// AI Chatbot implementation
+const server = http.createServer(app);
+
+const io = new Server(server, {
+  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
+});
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+io.on("connection", (socket) => {
+  console.log("User connected:", socket.id);
+ socket.on("send_message", async (msg) => {
+    try {
+      const response = await client.chat.completions.create({
+        model: "gpt-3.5-turbo",
+        messages: [{ role: "user", content: msg }],
+        max_tokens: 200,
+      });
+       const reply = response.choices[0].message.content;
+      socket.emit("receive_message", reply);
+    } catch (err) {
+      console.error("OpenAI error:", err.response?.data || err.message);
+      socket.emit("receive_message", "⚠️ Error getting AI response.");
+    }
+  });
+  
+  socket.on("disconnect", () => {
+    console.log("User disconnected:", socket.id);
+  });
+});
 
 app.listen(3000, () => {
   console.log("server is running");
