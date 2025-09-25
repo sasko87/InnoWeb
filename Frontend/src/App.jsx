@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage/HomePage";
+import ChatAI from "./components/ChatAI/ChatAI";
 
 function App() {
   return (

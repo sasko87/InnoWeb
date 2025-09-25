@@ -47,9 +47,9 @@
 
 .price {
   font-size: 2.5rem;
-  text-align: end;
   font-weight: 700;
   margin-bottom: 1rem;
+  text-align: center;
   background: linear-gradient(90deg, #12afef 45%, #7de130 55%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
