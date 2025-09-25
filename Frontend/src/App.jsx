@@ -13,11 +13,11 @@ function App() {
       <ScrollToTop />
       <div className="main-background">
         <Header />
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-        <Footer />
+        <Footer /> */}
       </div>
     </Router>
   );
