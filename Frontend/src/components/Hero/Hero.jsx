@@ -129,16 +129,20 @@ const Hero = () => {
     >
       <div className={classes.heroLeftContent}>
         <div className={classes.textContainer}>
-          <h1 className={classes.typing}>
+          <motion.h1
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
             {t("hero.titleOne")}
             <br />
             {t("hero.titleTwo")}
-          </h1>
+          </motion.h1>
           <motion.p
             className={classes.description}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.6 }}
           >
             {t("hero.subtitle")}
           </motion.p>
@@ -149,7 +153,7 @@ const Hero = () => {
               key={index}
               initial={{ opacity: 0, scale: 0.2 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }} // stagger effect
+              transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }} // stagger effect
             >
               <Card image={card.image} title={card.title} />
             </motion.div>
@@ -160,7 +164,7 @@ const Hero = () => {
       <motion.picture
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        transition={{ duration: 0.8, delay: 1.7 }}
         className={classes.HeroImageContainer}
       >
         <img src={HeroImg} alt="Hero" />
