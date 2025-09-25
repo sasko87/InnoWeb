@@ -21,7 +21,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: rgb(43, 41, 41);
+  backdrop-filter: blur(10px);
+
+  background: #ffffff26;
+  opacity: 1;
   padding: 5px;
   display: flex;
   justify-content: space-between;

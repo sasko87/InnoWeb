@@ -3,7 +3,7 @@ button {
   font-weight: 600;
   font-size: 1.5rem;
   color: white;
-  background: linear-gradient(90deg, #12afef 0%, #7de130 100%);
+  background: var(--background-gradient);
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -25,4 +25,5 @@ button:hover {
   padding: 0 2rem;
   gap: 10px;
   color: black;
+  background: var(--background-gradient);
 }

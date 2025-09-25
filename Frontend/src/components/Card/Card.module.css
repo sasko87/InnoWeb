@@ -12,9 +12,19 @@
   padding: 10px;
 }
 
+.imageContainer {
+  width: auto;
+  height: 80px;
+}
+
 .cardImage {
   width: 60px;
   height: 60px;
+}
+
+.textContainer {
+  text-align: start;
+  height: 40px;
 }
 
 .cardTitle {
@@ -22,8 +32,7 @@
   font-weight: 600;
   font-style: Semi Bold;
   font-size: 24px;
-
+  text-align: center;
   color: #7de130;
+  margin: 0;
 }
-
-
