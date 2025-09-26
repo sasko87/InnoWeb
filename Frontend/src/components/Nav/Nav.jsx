@@ -15,7 +15,7 @@ const sections = [
   { id: "pricing", key: "nav.pricing" },
 ];
 
-const Nav = ({ className }) => {
+const Nav = ({ className, onLinkClick }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -29,10 +29,14 @@ const Nav = ({ className }) => {
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => scrollToSection(id), 100);
+      onLinkClick();
     } else {
+      onLinkClick()
       scrollToSection(id);
     }
   };
+
+  
 
   useEffect(() => {
     if (location.pathname !== "/") {
@@ -83,15 +87,23 @@ const Nav = ({ className }) => {
             to="/contact"
             className={`${classes.navLink} ${
               active === "contact" ? classes.active : ""
-            }`}
+            }`
+            }
+            onClick={onLinkClick}
           >
             {t("nav.contact")}
+            
           </RouterLink>
         </li>
         <li>
-          <Button onClick={(e) => handleClick("pricing", e)}>
-            {t("nav.order")}
-          </Button>
+          <Button
+  onClick={(e) => {
+    handleClick("pricing", e);
+    onLinkClick?.();
+  }}
+>
+  {t("nav.order")}
+</Button>
         </li>
         <li>
           <LanguageSwitcher />

@@ -37,6 +37,7 @@
   justify-content: center;
   gap: 7rem;
   margin: 4rem 0;
+  flex: 1;
 }
 
 .card {
@@ -126,7 +127,34 @@
 
 /* постоечки стилови ... */
 
-@media (min-width: 769px) and (max-width: 1025px) {
+@media (max-width: 1520px) {
+.card {
+  
+  height: 13rem;
+  flex: 1;
+  
+}
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    justify-content: space-evenly;
+    gap: 3rem;
+    
+  }
+
+   .card {
+    width: 24rem;
+    height: auto;
+    padding: 1.5rem;
+    
+  }
+
+}
+  
+
+
+@media (min-width: 769px)  {
   .aboutContainer {
     padding: 2rem 4rem;
   }
@@ -143,15 +171,7 @@
     font-size: 1rem;
   }
 
-  .cards {
-    gap: 3rem;
-  }
 
-  .card {
-    width: 24rem;
-    height: auto;
-    padding: 1.5rem;
-  }
 
   .whyChooseUsContainer {
     padding: 2rem 3rem;
@@ -184,6 +204,8 @@
   .cards {
     flex-direction: column;
     gap: 2rem;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .card {

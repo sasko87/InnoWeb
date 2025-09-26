@@ -1,7 +1,7 @@
 .card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  width: 100%;
+ 
   min-height: 20px;
   padding: 24px;
   text-align: left;
@@ -62,3 +62,11 @@
     transform: rotate(0deg);
   }
 }
+
+@media screen and (max-width: 993px) {
+  .card {
+    width: 100%;
+  }
+}
+
+

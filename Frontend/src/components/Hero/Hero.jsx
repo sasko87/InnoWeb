@@ -136,7 +136,7 @@ const Hero = () => {
           >
             {t("hero.titleOne")}
             <br />
-            {t("hero.titleTwo")}
+            <span className={classes.titleSeparator}>—</span>{t("hero.titleTwo")}
           </motion.h1>
           <motion.p
             className={classes.description}

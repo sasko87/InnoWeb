@@ -1,11 +1,9 @@
 .hero {
   display: flex;
   flex: 1;
-
   gap: 16px;
   background-color: transparent;
   height: 90vh;
-
   min-height: fit-content;
   align-items: center;
   justify-content: center;
@@ -77,4 +75,39 @@
   to {
     width: 100%;
   }
+}
+
+@media screen and (max-width: 1200px) {
+  .hero{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .heroLeftContent{
+    width: 100vw;
+    min-height: fit-content;
+  
+  }
+
+  .textContainer {
+    width: 90vw;
+     
+    
+  }
+
+  .HeroImageContainer {
+    width: 60vw;
+    align-self: center;
+  }
+
+  .heroCardsContainer {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+ .titleSeparator {
+    display: block;
+  }
+
+
 }

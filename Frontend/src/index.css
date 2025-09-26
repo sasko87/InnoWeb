@@ -53,3 +53,25 @@ h1 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 5.9rem;
+    line-height: 7rem;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  h1 {
+    font-size: 4.6rem;
+    line-height: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4.6rem;
+    line-height: 4.5rem;
+    margin: 5rem 0;
+  }
+}
