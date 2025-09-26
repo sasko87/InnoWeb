@@ -75,3 +75,16 @@ h1 {
     margin: 5rem 0;
   }
 }
+
+@media screen and (max-width: 600px) {
+h1 {
+  font-size: 4.5rem;
+}
+}
+
+@media screen and (max-width: 430px) {
+h1 {
+  font-size: 3.4rem;
+  line-height: 3rem;
+}
+}

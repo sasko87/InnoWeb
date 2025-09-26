@@ -26,3 +26,14 @@
   text-align: justify;
   padding: 1rem 4rem 2rem 4rem;
 }
+
+@media screen and (max-width: 430px) {
+  .cards {
+    align-items: center;
+  }
+  .pricingCardsContainer{
+    
+    display: flex;
+    justify-content: center;
+  }
+}
