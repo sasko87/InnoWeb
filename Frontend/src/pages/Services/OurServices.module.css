@@ -33,3 +33,29 @@
   justify-self: center;
   width: 50%;
 }
+
+
+@media screen and (max-width: 1200px) {
+  .ourServices {
+    padding: 1.5rem
+
+  }
+  .serviceCards {
+    max-width: 900px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .serviceCards {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+  }
+
+  .serviceCards > :nth-child(5) {
+    width: 100%;
+  }
+}
+

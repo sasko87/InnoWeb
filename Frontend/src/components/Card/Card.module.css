@@ -36,3 +36,23 @@
   color: #7de130;
   margin: 0;
 }
+
+@media screen and (max-width: 993px) {
+  .card {
+    width: 152px; 
+    height: 150px;}
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100px; 
+    height: 130px;}
+
+    .cardTitle {
+      font-size: 16px;
+    }
+
+    .imageContainer {
+      height: 70px;
+    }
+}

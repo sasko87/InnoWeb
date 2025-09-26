@@ -1,14 +1,15 @@
 .modal {
   position: fixed;
-  top: 76.5px;
+  top: 80px;
   left: 0;
   right: 0;
   bottom: 0;
   background: #222222c7;
   backdrop-filter: blur(10px);
   z-index: 2000;
-  height: 88vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 5000;
 }
