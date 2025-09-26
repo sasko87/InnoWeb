@@ -28,7 +28,7 @@ const Pricing = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         {plans.map((plan, idx) => (
-          <motion.div key={idx} whileHover={{ scale: 1.05, y: -5 }}>
+          <motion.div className={classes.pricingCardsContainer} key={idx} whileHover={{ scale: 1.05, y: -5 }}>
             <PricingCard {...plan} />
           </motion.div>
         ))}
