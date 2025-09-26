@@ -38,6 +38,7 @@
   gap: 7rem;
   margin: 4rem 0;
   flex: 1;
+ 
 }
 
 .card {
@@ -204,8 +205,7 @@
   .cards {
     flex-direction: column;
     gap: 2rem;
-    margin-left: 20px;
-    margin-right: 20px;
+     width: 90%;
   }
 
   .card {
@@ -233,3 +233,5 @@
     font-size: 0.95rem;
   }
 }
+
+

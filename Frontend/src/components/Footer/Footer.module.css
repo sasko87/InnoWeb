@@ -42,6 +42,8 @@
   padding: 0 4rem;
 }
 
+
+
 .footerSectionLogo {
   position: relative;
   max-width: 24rem;
@@ -140,4 +142,16 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1200px) {
+  .footerContainer {
+    width: 75%;
+    margin: auto
+  }
+
+  .footerContainer div:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
