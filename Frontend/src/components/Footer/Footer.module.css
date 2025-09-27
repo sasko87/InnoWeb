@@ -42,8 +42,6 @@
   padding: 0 4rem;
 }
 
-
-
 .footerSectionLogo {
   position: relative;
   max-width: 24rem;
@@ -146,8 +144,15 @@
 
 @media screen and (max-width: 1200px) {
   .footerContainer {
-    width: 75%;
-    margin: auto
+    margin: auto;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footerContainer div:nth-child(2) {
+    display: none;
   }
 
   .footerContainer div:last-child {
