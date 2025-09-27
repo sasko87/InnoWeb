@@ -23,10 +23,12 @@ jobs:
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
+        working-directory: Frontend # <-- your project folder
 
       # Step 4: Build Vite project
       - name: Build Vite app
         run: npm run build
+        working-directory: Frontend # <-- your project folder
 
       # Step 5: Deploy via FTP
       - name: Deploy via FTP
@@ -35,7 +37,7 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: dist # Vite build folder
+          local-dir: Frontend/dist # <-- build folder inside your project folder
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
           passive: true # enable passive mode (important for shared hosting)
           log-level: verbose # detailed logs for debugging
