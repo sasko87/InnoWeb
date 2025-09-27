@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20" # or your project node version
+          node-version: "20" # your Node version
 
       # Step 3: Install dependencies
       - name: Install dependencies
@@ -37,4 +37,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: dist # Vite build folder
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
+          passive: true # enable passive mode (important for shared hosting)
+          log-level: verbose # detailed logs for debugging
           exclude: .gitignore,.github
