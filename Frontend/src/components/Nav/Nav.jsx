@@ -29,14 +29,13 @@ const Nav = ({ className, onLinkClick }) => {
     if (location.pathname !== "/") {
       navigate("/");
       setTimeout(() => scrollToSection(id), 100);
-      onLinkClick();
+      onLinkClick?.();
     } else {
-      onLinkClick()
+      onLinkClick?.();
+
       scrollToSection(id);
     }
   };
-
-  
 
   useEffect(() => {
     if (location.pathname !== "/") {
@@ -87,23 +86,21 @@ const Nav = ({ className, onLinkClick }) => {
             to="/contact"
             className={`${classes.navLink} ${
               active === "contact" ? classes.active : ""
-            }`
-            }
+            }`}
             onClick={onLinkClick}
           >
             {t("nav.contact")}
-            
           </RouterLink>
         </li>
         <li>
           <Button
-  onClick={(e) => {
-    handleClick("pricing", e);
-    onLinkClick?.();
-  }}
->
-  {t("nav.order")}
-</Button>
+            onClick={(e) => {
+              handleClick("pricing", e);
+              onLinkClick?.();
+            }}
+          >
+            {t("nav.order")}
+          </Button>
         </li>
         <li>
           <LanguageSwitcher />
