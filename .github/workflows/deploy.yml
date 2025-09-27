@@ -1,4 +1,4 @@
-name: Deploy React to OrangeHost via FTP
+name: Deploy Vite to OrangeHost via FTP
 
 on:
   push:
@@ -18,14 +18,14 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20" # Or your project node version
+          node-version: "20" # or your project node version
 
       # Step 3: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build React app
-      - name: Build React app
+      # Step 4: Build Vite project
+      - name: Build Vite app
         run: npm run build
 
       # Step 5: Deploy via FTP
@@ -35,6 +35,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build # React build folder
+          local-dir: dist # Vite build folder
           server-dir: ${{ secrets.FTP_REMOTE_PATH }}
           exclude: .gitignore,.github
