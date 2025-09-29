@@ -122,12 +122,11 @@
 
 @media screen and (max-width: 430px) {
   .hero {
-    justify-content: space-evenly;
+    justify-content: center;
     /* height: 90dvh; */
   }
 
   .heroLeftContent {
-    justify-content: space-evenly;
     height: 100dvh;
   }
 
@@ -136,15 +135,16 @@
   }
   .heroCardsContainer {
     gap: 5px;
-    margin: 0 0 2rem 0;
+    margin: 0 0 5rem 0;
   }
 
   .HeroImageContainer img {
-    width: 70%;
+    width: 80%;
   }
 
   .description {
     font-size: 17px;
     line-height: 20px;
+    margin-bottom: 0;
   }
 }
