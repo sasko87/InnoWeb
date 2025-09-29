@@ -123,7 +123,7 @@
 @media screen and (max-width: 430px) {
   .hero {
     justify-content: space-evenly;
-    /* height: 90dvh; */
+    height: 90dvh;
   }
 
   .heroLeftContent {
