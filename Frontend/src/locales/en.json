@@ -1,0 +1,224 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "pricing": "Pricing",
+    "contact": "Contact",
+    "order": "Order Now"
+  },
+
+  "hero": {
+    "titleOne": "Your Ideas, Our Code",
+    "titleTwo": "Let’s Make It Real",
+    "subtitle": "From concept to launch, we craft websites that are fast, functional, and designed to convert.",
+    "cards": {
+      "mobileOne": "Mobile Friendly",
+      "maintenance": "Maintenance",
+      "custom": "Custom Design",
+      "mobileTwo": "Designed for Every Device"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "list": {
+      "webapps": {
+        "title": "Web Application Development",
+        "subtitle": "Modern, scalable, and functional solutions",
+        "description": "We create custom web applications focused on performance, security, and intuitive user experience. Perfect for automation, e-commerce, and specific business needs."
+      },
+      "websites": {
+        "title": "Website Development",
+        "subtitle": "Your brand, online",
+        "description": "We build responsive and fast websites that showcase your company in the best way possible — from simple presentation pages to complex platforms."
+      },
+      "custom": {
+        "title": "Custom Design",
+        "subtitle": "A unique look for a unique business",
+        "description": "We craft a distinctive visual identity that sets your brand apart. Every design is tailored to your business goals and your target audience."
+      },
+      "seo": {
+        "title": "SEO Optimization",
+        "subtitle": "Faster, better, higher on Google",
+        "description": "We improve performance, SEO, and UX to ensure better search engine rankings and an exceptional user experience."
+      },
+      "maintenance": {
+        "title": "Maintenance and Support",
+        "subtitle": "Security and continuous growth",
+        "description": "We provide regular technical maintenance, security updates, and upgrades to ensure uninterrupted performance of your website or application."
+      }
+    }
+  },
+  "projects": {
+    "title": "Our Projects"
+  },
+  "about": {
+    "title": "About Us",
+    "tagline": "Driven by innovation, powered by expertise",
+    "description": "We are a passionate team of designers, developers, and digital strategists dedicated to creating web solutions that help businesses thrive in the digital age.",
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be a trusted partner for businesses seeking exceptional online presence and cutting-edge digital solutions. We believe in collaboration, transparency, and quality. Every project is approached with creativity, technical precision, and a focus on the client's goals."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "text": "To deliver innovative, high-performance websites and web applications that empower our clients to grow and succeed."
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us?",
+      "subtitle": "Your success is our priority",
+      "text": "We combine expertise, creativity, and a client-first mindset to ensure you get more than just a website — you get a solution that works for your business.",
+      "points": [
+        "Tailored Solutions – Every project is custom-built to fit your unique goals.",
+        "24/7 Support – Always here when you need us.",
+        "Fast Delivery – We meet deadlines without compromising quality.",
+        "Proven Reliability – Secure, optimized, and scalable web solutions.",
+        "Cutting-Edge Technology – We use the latest tools and frameworks to keep your site ahead of the curve.",
+        "Long-Term Partnership – We’re here for the journey, not just the launch."
+      ]
+    }
+  },
+  "pricing": {
+    "title": "Pricing Plans",
+    "plans": [
+      {
+        "category": "Website Development",
+        "title": "Basic",
+        "features": [
+          "Single-language version",
+          "Up to 3 functions/links",
+          "Up to 20 photos, 1×A4 text",
+          "1 email address",
+          "Basic SEO optimization",
+          "Support Mon–Fri",
+          "Monthly visit statistics"
+        ],
+        "price": "12.000 MKD"
+      },
+      {
+        "category": "Website Development",
+        "title": "PRO",
+        "features": [
+          "Bilingual version",
+          "Up to 7 functions/links",
+          "Up to 40 photos, 3×A4 text",
+          "3 email addresses",
+          "Standard SEO optimization",
+          "Support Mon–Sat",
+          "Monthly visit statistics"
+        ],
+        "price": "15.000 MKD"
+      },
+      {
+        "category": "Website Development",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "by Agreement"
+      },
+      {
+        "category": "Web Application",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "by Agreement"
+      },
+      {
+        "category": "Maintenance",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "3000 MKD"
+      },
+      {
+        "category": "Custom Design",
+        "title": "PREMIUM",
+        "features": [
+          "Multilingual version",
+          "Unlimited functions/links",
+          "Unlimited photos",
+          "10 email addresses",
+          "Advanced SEO optimization",
+          "24/7 Support",
+          "Detailed visit statistics"
+        ],
+        "price": "by Agreement"
+      }
+    ],
+    "note": "* All plans include 1 year of free maintenance, which covers technical updates, bug fixes, and minor adjustments to ensure everything runs smoothly after launch."
+  },
+  "footer": {
+    "description": "We turn ideas into powerful, interactive digital experiences. Whether it’s a sleek landing page or a complex web app, our code is clean, our designs are sharp, and our results speak for themselves.",
+    "services": {
+      "title": "Services",
+      "list": [
+        "Website Development",
+        "Web Applications Development",
+        "Maintenance",
+        "SEO Optimization",
+        "Custom Design"
+      ]
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "email": "Email",
+      "phone": "Phone/WhatsApp"
+    },
+    "contactPage": "Contact Page",
+    "follow": "Follow Us:",
+    "rights": "InnoWeb – All rights reserved"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Whether you’re looking to develop a new website, a mobile app, or purchase an existing solution, our team is ready to help.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "service": "Service Required",
+      "message": "Message"
+    },
+    "optional": "Optional",
+    "services": [
+      "Website Development BASIC",
+      "Website Development PRO",
+      "Website Development PREMIUM",
+      "Web Application PREMIUM",
+      "Maintenance PREMIUM",
+      "SEO Optimization",
+      "Custom Design PREMIUM",
+      "Other"
+    ],
+    "submit": "Submit",
+    "sending": "Sending...",
+    "error": "Something went wrong. Please try again in a moment.",
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "hours": "Business Hours"
+    }
+  }
+}

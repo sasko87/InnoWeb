@@ -1,0 +1,133 @@
+/* .navList {
+  list-style: none;
+  text-decoration: none;
+  padding: 0 40px 0 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  cursor: pointer;
+}
+
+.navList li a {
+  text-decoration: none;
+  color: #fffafa;
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 22px;
+  position: relative;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.navList li a:hover {
+  background: var(--background-gradient);
+  background-clip: text;
+  color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.navList li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: var(--background-gradient);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navList li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  padding-left: 40px;
+}
+
+.logoLogo {
+  height: 4rem;
+  width: 15rem;
+  padding-left: 1.5rem;
+} */
+
+.logoLogo {
+  height: 4rem;
+  width: 15rem;
+  padding-left: 1.5rem;
+}
+
+.mobileNav {
+  display: none;
+  padding-right: 15px;
+}
+
+.hamburger {
+  width: 40px;
+  height: 30px;
+  background: transparent; /* transparent background */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: conic-gradient(
+    from 30.84deg at 43.8% 43.68%,
+    #7de130 0deg,
+    #12afef 224.99deg,
+    #7de130 360deg
+  );
+  transition: all 0.4s ease;
+}
+
+/* Animation into X */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+@media screen and (max-width: 1200px) {
+  .mainNav {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .logoLogo {
+    width: 8rem;
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .logoLogo {
+    width: 6rem;
+    height: 3rem;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 20px;
+  }
+}

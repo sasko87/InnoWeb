@@ -1,0 +1,87 @@
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--primary-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 20rem;
+  min-height: 33rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category {
+  display: inline-block;
+  width: fit-content;
+  background-color: #0c5e80;
+  color: var(--secondary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  padding: 0.2rem 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+  color: var(--secondary-color);
+  display: block;
+}
+
+.features {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  text-align: start;
+}
+
+.features li {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  background: linear-gradient(90deg, #12afef 45%, #7de130 55%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 430px) {
+  .card {
+    width: 90%;
+    min-height: 25rem;
+  }
+  .category {
+    font-size: 0.8rem;
+  }
+
+  .title {
+    margin: 1rem 0;
+  }
+
+  .features {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .price {
+    font-size: 1.4rem;
+    text-align: right;
+    margin: 1rem 0;
+  }
+}
