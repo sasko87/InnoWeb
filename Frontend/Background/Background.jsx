@@ -36,16 +36,28 @@ export default function Background({
       currentOpacitiesRef.current.push(0);
     }
 
+    function getDocHeight() {
+      return Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        document.body.offsetHeight,
+        document.documentElement.offsetHeight,
+        document.body.clientHeight,
+        document.documentElement.clientHeight
+      );
+    }
+
     function resize() {
+      const docHeight = getDocHeight();
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = docHeight; // cover full scrollable height
 
       // Make nebula bigger on small screens
       const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
 
       nebulaCanvasesRef.current.forEach((nebCanvas) => {
         nebCanvas.width = window.innerWidth * sizeMultiplier;
-        nebCanvas.height = window.innerHeight * sizeMultiplier;
+        nebCanvas.height = docHeight * sizeMultiplier;
       });
 
       initStars();
@@ -152,22 +164,19 @@ export default function Background({
     function handleScroll() {
       const scrollTop = window.scrollY;
       const sectionHeight = window.innerHeight;
-      const totalSections = 8;
 
       nebulaCanvasesRef.current.forEach((_, i) => {
         let opacity = 0;
 
         if (scrollTop >= sectionHeight && scrollTop < sectionHeight * 4) {
-          // Sections 2–4 -> fade in
           opacity = (scrollTop - sectionHeight) / (sectionHeight * 3);
         } else if (
           scrollTop >= sectionHeight * 4 &&
           scrollTop < sectionHeight * 8
         ) {
-          // Sections 5–8 -> fade out
           opacity = 1 - (scrollTop - sectionHeight * 4) / (sectionHeight * 4);
         } else {
-          opacity = 0; // Section 1 or beyond 8
+          opacity = 0;
         }
 
         targetOpacitiesRef.current[i] = Math.min(Math.max(opacity, 0), 1);
@@ -275,6 +284,7 @@ export default function Background({
         left: 0,
         width: "100%",
         height: "100%",
+        minHeight: "100%",
         zIndex: -1,
         pointerEvents: "none",
       }}
