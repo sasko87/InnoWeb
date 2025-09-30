@@ -36,22 +36,24 @@ export default function Background({
       currentOpacitiesRef.current.push(0);
     }
 
-    function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+  function resize() {
+  const width = window.innerWidth;
+  const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
 
-      // Make nebula bigger on small screens
-      const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
+  canvas.width = width;
+  canvas.height = height;
 
-      nebulaCanvasesRef.current.forEach((nebCanvas) => {
-        nebCanvas.width = window.innerWidth * sizeMultiplier;
-        nebCanvas.height = window.innerHeight * sizeMultiplier;
-      });
+  // update nebula canvases too
+  const sizeMultiplier = width < 768 ? 2 : 1.5;
+  nebulaCanvasesRef.current.forEach((nebCanvas) => {
+    nebCanvas.width = width * sizeMultiplier;
+    nebCanvas.height = height * sizeMultiplier;
+  });
 
-      initStars();
-      drawStarTexture(maxStarSize);
-      drawNebulaClusters();
-    }
+  initStars();
+  drawStarTexture(maxStarSize);
+  drawNebulaClusters();
+}
 
     function rand(min, max) {
       return Math.random() * (max - min) + min;
@@ -150,29 +152,29 @@ export default function Background({
     }
 
     function handleScroll() {
-      const scrollTop = window.scrollY;
-      const sectionHeight = window.innerHeight;
-      const totalSections = 8;
+  const scrollTop = window.scrollY;
+  const sectionHeight = window.innerHeight;
+  const totalSections = 6; // number of vertical sections
 
-      nebulaCanvasesRef.current.forEach((_, i) => {
-        let opacity = 0;
+  nebulaCanvasesRef.current.forEach((_, i) => {
+    let opacity = 0;
 
-        if (scrollTop >= sectionHeight && scrollTop < sectionHeight * 4) {
-          // Sections 2–4 -> fade in
-          opacity = (scrollTop - sectionHeight) / (sectionHeight * 3);
-        } else if (
-          scrollTop >= sectionHeight * 4 &&
-          scrollTop < sectionHeight * 8
-        ) {
-          // Sections 5–8 -> fade out
-          opacity = 1 - (scrollTop - sectionHeight * 4) / (sectionHeight * 4);
-        } else {
-          opacity = 0; // Section 1 or beyond 8
-        }
-
-        targetOpacitiesRef.current[i] = Math.min(Math.max(opacity, 0), 1);
-      });
+    if (scrollTop >= sectionHeight && scrollTop < sectionHeight * (totalSections / 2)) {
+      // Fade in from section 2 to halfway
+      opacity = (scrollTop - sectionHeight) / (sectionHeight * ((totalSections / 2) - 1));
+    } else if (
+      scrollTop >= sectionHeight * (totalSections / 2) &&
+      scrollTop < sectionHeight * totalSections
+    ) {
+      // Fade out from halfway to the end
+      opacity = 1 - (scrollTop - sectionHeight * (totalSections / 2)) / (sectionHeight * (totalSections / 2));
+    } else {
+      opacity = 0;
     }
+
+    targetOpacitiesRef.current[i] = Math.min(Math.max(opacity, 0), 1);
+  });
+}
 
     function handleMouseMove(e) {
       mouseRef.current.x = (e.clientX / window.innerWidth - 0.5) * 2;
