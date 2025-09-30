@@ -1,6 +1,6 @@
 .card {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   backdrop-filter: blur(4px);
   border-radius: 15px;
   background: #ffffff26;
@@ -28,10 +28,7 @@
 }
 
 .cardTitle {
-  font-family: Inter;
-  font-weight: 600;
-  font-style: Semi Bold;
-  font-size: 24px;
+  font-size: 1.1rem;
   text-align: center;
   color: #7de130;
   margin: 0;

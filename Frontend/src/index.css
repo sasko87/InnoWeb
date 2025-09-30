@@ -50,9 +50,9 @@ h1 {
   font-family: Poppins;
   margin-bottom: 10px;
   font-weight: 600;
-  font-style: SemiBold;
-  font-size: 80px;
-  line-height: 95px;
+
+  font-size: 60px;
+  line-height: 70px;
   letter-spacing: -3%;
 }
 
@@ -111,9 +111,9 @@ section {
 
 @media screen and (max-width: 430px) {
   h1 {
-    font-size: 3rem;
-    line-height: 3rem;
     margin: 1rem auto;
+    font-size: 35px;
+    line-height: 3rem;
   }
 
   h2 {

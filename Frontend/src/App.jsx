@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
@@ -7,8 +7,21 @@ import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage/HomePage";
 import ChatAI from "./components/ChatAI/ChatAI";
 import Background from "../Background/Background";
+import Loader from "./components/Loader/Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate loading (replace with your API calls / setup logic)
+    const timer = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
       <Router>

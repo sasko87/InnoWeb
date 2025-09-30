@@ -19,15 +19,25 @@
   height: 100%;
 }
 
+.secondTitle {
+  font-size: 75px;
+  line-height: 85px;
+}
+
+.titleSeparator {
+  font-size: 75px;
+}
+
 .description {
   color: #12afef;
   text-align: center;
-  font-family: Montserrat;
-  font-weight: 600;
-  font-style: SemiBold;
-  font-size: 26px;
+  /* font-family: Montserrat; */
+  /* font-weight: 600;
+  font-style: SemiBold; */
+  font-size: 1.2rem;
   margin-top: 10px;
-  line-height: 31px;
+  margin-bottom: 10px;
+  line-height: 30px;
   letter-spacing: 3%;
 }
 
@@ -71,6 +81,9 @@
   overflow: hidden;
   animation: typing 1s steps(24, end) forwards;
 }
+/* .titleSeparator {
+  display: none;
+} */
 
 @keyframes typing {
   from {
@@ -143,8 +156,13 @@
   }
 
   .description {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 20px;
     margin-bottom: 0;
+  }
+
+  .secondTitle {
+    font-size: 40px;
+    line-height: 3rem;
   }
 }
