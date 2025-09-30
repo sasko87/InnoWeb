@@ -77,16 +77,6 @@ section {
   background-repeat: no-repeat;
 }
 
-.background-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; /* fallback */
-  height: 100dvh; /* modern browsers */
-  z-index: -1;
-}
-
 @media screen and (max-width: 1200px) {
   h1 {
     font-size: 5.4rem;
@@ -128,21 +118,5 @@ section {
 
   h2 {
     font-size: 2.5rem;
-  }
-}
-
-.typing {
-  width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 1s steps(24, end) forwards;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
   }
 }

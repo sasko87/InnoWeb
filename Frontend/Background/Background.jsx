@@ -37,9 +37,8 @@ export default function Background({
     }
 
     function resize() {
-      const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
-  canvas.width = window.innerWidth;
-  canvas.height = height;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
       // Make nebula bigger on small screens
       const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
@@ -269,8 +268,18 @@ export default function Background({
   }, [starCount, maxStarSize, parallaxStrength, subtleDrift]);
 
   return (
-    <div className="background-canvas">
-  <canvas ref={canvasRef} aria-hidden="true" />
-</div>
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: -1,
+        pointerEvents: "none",
+      }}
+    >
+      <canvas ref={canvasRef} aria-hidden="true" />
+    </div>
   );
 }
