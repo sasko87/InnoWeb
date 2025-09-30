@@ -83,11 +83,11 @@
 
 // export default Hero;
 import classes from "./Hero.module.css";
-import HeroImg from "../../assets/hero-image.png";
+import HeroImg from "../../assets/hero-image.webp";
 import Card from "../Card/Card.jsx";
-import MaintainanceImg from "../../assets/maintainance.png";
-import MobileImg from "../../assets/mobile.png";
-import CustomDesignImg from "../../assets/custom-design.png";
+import MaintainanceImg from "../../assets/maintainance.webp";
+import MobileImg from "../../assets/mobile.webp";
+import CustomDesignImg from "../../assets/custom-design.webp";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 

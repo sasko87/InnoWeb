@@ -40,6 +40,7 @@ const HomePage = () => {
       <img
         src={chatAiIcon}
         alt="Chatbot"
+        loading="lazy"
         onClick={handleChatClick}
         style={{
           position: "fixed",

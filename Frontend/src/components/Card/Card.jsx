@@ -6,7 +6,7 @@ const Card = ({ image, title, subtitle, description }) => {
     <div className={classes.card}>
       {image && (
         <div className={classes.imageContainer}>
-          <img src={image} alt="Card" className={classes.cardImage} />
+          <img src={image} loading="lazy" alt="Card" className={classes.cardImage} />
         </div>
       )}
       <div className={classes.textContainer}>

@@ -6,20 +6,20 @@ import monitor from "../../assets/monitor.png";
 import { useTranslation } from "react-i18next";
 
 const projectImages = import.meta.glob(
-  "../../assets/projects/*.{jpg,jpeg,png}",
+  "../../assets/projects/*.{jpg,jpeg,webp}",
   { eager: true }
 );
 
 const projectLinks = {
-  "project1.png": "https://wvp.mk/index.html",
-  "project2.png": "https://mat-trans-9vap.vercel.app/",
-  "project3.png": "https://baumarket.mk",
-  "project4.png": "https://stevkovski.xyz/",
-  "project5.png": "https://chat.stevkovski.xyz/login",
-  "project6.png": "https://ecommercewebsite-flame.vercel.app/",
-  "project7.png": "https://ecommercewebsite-flame.vercel.app/",
-  "project8.png": "https://mentor-token.stevkovski.xyz/",
-  "project9.png": "https://coffe-shop-sigma-seven.vercel.app/",
+  "project1.webp": "https://wvp.mk/index.html",
+  "project2.webp": "https://mat-trans-9vap.vercel.app/",
+  "project3.webp": "https://baumarket.mk",
+  "project4.webp": "https://stevkovski.xyz/",
+  "project5.webp": "https://chat.stevkovski.xyz/login",
+  "project6.webp": "https://ecommercewebsite-flame.vercel.app/",
+  "project7.webp": "https://ecommercewebsite-flame.vercel.app/",
+  "project8.webp": "https://mentor-token.stevkovski.xyz/",
+  "project9.webp": "https://coffe-shop-sigma-seven.vercel.app/",
 };
 
 const itemVariants = {
@@ -68,6 +68,8 @@ const Projects = () => {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+
+  
 
   return (
     <div className={classes.projectsContainer}>
@@ -124,12 +126,12 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img
+                    <img loading="lazy"
                       src={block[0].img}
                       alt="project"
                       className={classes.projectInside}
@@ -162,12 +164,12 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img
+                    <img loading="lazy"
                       src={block[1].img}
                       alt="project"
                       className={classes.projectInside}
@@ -203,12 +205,12 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img
+                    <img loading="lazy"
                       src={block[2].img}
                       alt="project"
                       className={classes.projectInside}
@@ -241,12 +243,12 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img
+                    <img loading="lazy"
                       src={block[3].img}
                       alt="project"
                       className={classes.projectInside}
@@ -282,12 +284,12 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img
+                    <img loading="lazy"
                       src={block[4].img}
                       alt="project"
                       className={classes.projectInside}
@@ -320,12 +322,12 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img
+                    <img loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img
+                    <img loading="lazy"
                       src={block[5].img}
                       alt="project"
                       className={classes.projectInside}

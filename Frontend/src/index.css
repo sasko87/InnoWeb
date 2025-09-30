@@ -120,3 +120,19 @@ section {
     font-size: 2.5rem;
   }
 }
+
+.typing {
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 1s steps(24, end) forwards;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
