@@ -7,20 +7,6 @@
   align-items: center;
 }
 
-/* .heading {
-  font-size: 4.5rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-  letter-spacing: 1px;
-  text-align: center;
-  background: linear-gradient(90deg, #12afef 45%, #7de130 55%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-} */
-
 .serviceCards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

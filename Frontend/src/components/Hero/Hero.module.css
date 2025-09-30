@@ -31,9 +31,6 @@
 .description {
   color: #12afef;
   text-align: center;
-  /* font-family: Montserrat; */
-  /* font-weight: 600;
-  font-style: SemiBold; */
   font-size: 1.2rem;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -81,9 +78,6 @@
   overflow: hidden;
   animation: typing 1s steps(24, end) forwards;
 }
-/* .titleSeparator {
-  display: none;
-} */
 
 @keyframes typing {
   from {
@@ -136,7 +130,6 @@
 @media screen and (max-width: 430px) {
   .hero {
     justify-content: center;
-    /* height: 90dvh; */
   }
 
   .heroLeftContent {

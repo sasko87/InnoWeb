@@ -21,11 +21,8 @@
 }
 
 .subtitle {
-  /* color: #ffff; */
   color: var(--secondary-color);
   font-family: Inter;
-  /* font-style: semi-bold; */
-  /* font-weight: 600; */
   text-align: center;
   font-size: 1rem;
   font-style: italic;
@@ -33,8 +30,6 @@
 }
 
 .description {
-  /* font-family: Inter; */
-  /* font-weight: 700; */
   color: var(--primary-color);
   font-size: 1.1rem;
   line-height: 1.5;
