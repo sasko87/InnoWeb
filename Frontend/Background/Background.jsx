@@ -37,8 +37,9 @@ export default function Background({
     }
 
     function resize() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      const height = window.visualViewport ? window.visualViewport.height : window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = height;
 
       // Make nebula bigger on small screens
       const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
