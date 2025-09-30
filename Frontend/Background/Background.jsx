@@ -269,18 +269,8 @@ export default function Background({
   }, [starCount, maxStarSize, parallaxStrength, subtleDrift]);
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        zIndex: -1,
-        pointerEvents: "none",
-      }}
-    >
-      <canvas ref={canvasRef} aria-hidden="true" />
-    </div>
+    <div className="background-canvas">
+  <canvas ref={canvasRef} aria-hidden="true" />
+</div>
   );
 }
