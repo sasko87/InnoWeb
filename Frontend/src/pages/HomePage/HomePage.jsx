@@ -4,17 +4,17 @@ import Projects from "../Projects/Projects";
 import OurServices from "../Services/OurServices";
 import About from "../About/About";
 import Pricing from "../Pricing/Pricing";
-import ChatAI from "../../components/ChatAI/ChatAI";
-import chatAiIcon from "../../assets/chatbot.jpg";
+// import ChatAI from "../../components/ChatAI/ChatAI";
+// import chatAiIcon from "../../assets/chatbot.jpg";
 
 const HomePage = () => {
-  const [showChat, setShowChat] = useState(false);
-  const [initialMessages, setInitialMessages] = useState([]);
+  // const [showChat, setShowChat] = useState(false);
+  // const [initialMessages, setInitialMessages] = useState([]);
 
-  const handleChatClick = () => {
-    setInitialMessages([{ sender: "bot", text: "Hello, how can I help you?" }]);
-    setShowChat(true);
-  };
+  // const handleChatClick = () => {
+  //   setInitialMessages([{ sender: "bot", text: "Hello, how can I help you?" }]);
+  //   setShowChat(true);
+  // };
 
   return (
     <>
@@ -37,7 +37,7 @@ const HomePage = () => {
       </div>
 
       {/* Floating ChatAi icon */}
-      <img
+      {/* <img
         src={chatAiIcon}
         alt="Chatbot"
         loading="lazy"
@@ -54,10 +54,10 @@ const HomePage = () => {
           border: "2px solid #093d62ff",
           zIndex: 1000,
         }}
-      />
+      /> */}
 
       {/* Chat Window */}
-      {showChat && (
+      {/* {showChat && (
         <div
           style={{
             position: "fixed",
@@ -75,7 +75,7 @@ const HomePage = () => {
             onClose={() => setShowChat(false)}
           />
         </div>
-      )}
+      )} */}
     </>
   );
 };

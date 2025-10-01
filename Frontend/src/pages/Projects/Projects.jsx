@@ -69,11 +69,10 @@ const Projects = () => {
     trackMouse: true,
   });
 
-  
-
   return (
     <div className={classes.projectsContainer}>
       <motion.h2
+        className={classes.projectsTitle}
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -126,12 +125,14 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={block[0].img}
                       alt="project"
                       className={classes.projectInside}
@@ -164,12 +165,14 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={block[1].img}
                       alt="project"
                       className={classes.projectInside}
@@ -205,12 +208,14 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={block[2].img}
                       alt="project"
                       className={classes.projectInside}
@@ -243,12 +248,14 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={block[3].img}
                       alt="project"
                       className={classes.projectInside}
@@ -284,12 +291,14 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={block[4].img}
                       alt="project"
                       className={classes.projectInside}
@@ -322,12 +331,14 @@ const Projects = () => {
                       },
                     }}
                   >
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={monitor}
                       alt="Monitor"
                       className={classes.monitorFrame}
                     />
-                    <img loading="lazy"
+                    <img
+                      loading="lazy"
                       src={block[5].img}
                       alt="project"
                       className={classes.projectInside}
