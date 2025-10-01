@@ -85,7 +85,7 @@ const Hero = () => {
         transition={{ duration: 0.8, delay: 1.7 }}
         className={classes.HeroImageContainer}
       >
-        <img src={HeroImg} alt="Hero" />
+        <img src={HeroImg} alt="Hero" loading="eager" />
       </motion.picture>
     </motion.main>
   );

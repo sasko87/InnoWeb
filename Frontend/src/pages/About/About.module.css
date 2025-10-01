@@ -24,8 +24,8 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 7rem;
+  justify-content: space-between;
+  /* gap: 3rem; */
   margin: 4rem 0;
   flex: 1;
 }
@@ -34,8 +34,8 @@
   background: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 15px;
-  width: 32rem;
-  height: 11rem;
+  width: 40%;
+
   color: var(--secondary-color);
   transition: transform 0.5s ease;
   transform: rotate(0deg);
@@ -75,8 +75,8 @@
 .whyChooseUsContent {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 7rem;
+  justify-content: space-around;
+  /* gap: 7rem; */
 }
 
 .whyLeft,

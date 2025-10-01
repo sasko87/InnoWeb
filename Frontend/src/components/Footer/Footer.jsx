@@ -13,7 +13,12 @@ const Footer = () => {
         <div className={classes.footerContainer}>
           <div className={classes.footerSectionLogo}>
             <a href="/">
-              <img loading="lazy" src={logoImg} alt="InnoWebLogo" className={classes.logo} />
+              <img
+                loading="lazy"
+                src={logoImg}
+                alt="InnoWebLogo"
+                className={classes.logo}
+              />
             </a>
             <p className={classes.footerDescription}>
               {t("footer.description")}
@@ -65,14 +70,6 @@ const Footer = () => {
                 rel="noopener noreferrer"
               >
                 Instagram
-              </a>
-              <span className={classes.separator}> | </span>
-              <a
-                href="https://www.linkedin.com/company/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
               </a>
             </div>
           </div>

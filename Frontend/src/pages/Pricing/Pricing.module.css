@@ -14,7 +14,7 @@
   font-weight: 600;
   color: var(--secondary-color);
   text-align: justify;
-  padding: 1rem 4rem 2rem 4rem;
+  padding: 2rem 4rem 2rem 4rem;
 }
 
 @media screen and (max-width: 430px) {
