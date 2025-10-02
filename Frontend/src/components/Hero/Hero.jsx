@@ -40,7 +40,7 @@ const Hero = () => {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.4 }}
       viewport={{ once: true, amount: 0.2 }}
       className={classes.hero}
     >
@@ -49,7 +49,7 @@ const Hero = () => {
           <motion.h1
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.4 }}
           >
             {t("hero.titleOne")}
             <br />
@@ -60,7 +60,7 @@ const Hero = () => {
             className={classes.description}
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.6 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
             {t("hero.subtitle")}
           </motion.p>
@@ -71,7 +71,7 @@ const Hero = () => {
               key={index}
               initial={{ opacity: 0, scale: 0.2 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }} // stagger effect
+              transition={{ duration: 0.2, delay: 0.2 + index * 0.2 }} // stagger effect
             >
               <Card image={card.image} title={card.title} />
             </motion.div>
@@ -82,7 +82,7 @@ const Hero = () => {
       <motion.picture
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 1.7 }}
+        transition={{ duration: 0.4, delay: 1.2 }}
         className={classes.HeroImageContainer}
       >
         <img src={HeroImg} alt="Hero" loading="eager" />
