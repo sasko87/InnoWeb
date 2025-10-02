@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { useSwipeable } from "react-swipeable";
 import classes from "./Projects.module.css";
-import monitor from "../../assets/monitor.png";
+import monitor from "../../assets/monitor.webp";
 import { useTranslation } from "react-i18next";
 
 const projectImages = import.meta.glob(

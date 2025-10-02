@@ -77,8 +77,34 @@ textarea:focus {
   box-shadow: 0 0 10px rgba(18, 175, 239, 0.4);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .container {
     padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .contactDetails {
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  .form,
+  .info {
+    width: 60%;
+  }
+}
+
+@media (max-width: 769px) {
+  .form,
+  .info {
+    width: 95%;
+  }
+}
+
+@media (max-width: 399px) {
+  .info p {
+    font-size: 0.9rem;
   }
 }

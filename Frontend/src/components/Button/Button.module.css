@@ -15,7 +15,6 @@ button {
 button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(18, 175, 239, 0.4);
-  /* background: #7de130; */
 }
 
 .mainButton {

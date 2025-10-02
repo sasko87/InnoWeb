@@ -61,7 +61,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className={classes.container}>
+    <section className={classes.container}>
       <div>
         <motion.h2
           className={classes.heading}
@@ -159,7 +159,7 @@ const ContactPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
