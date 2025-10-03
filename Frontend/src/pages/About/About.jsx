@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import classes from "./About.module.css";
+import checkmark from "/checkmark.gif";
 
 const About = () => {
   const { t } = useTranslation();
@@ -91,7 +92,12 @@ const About = () => {
             <ul>
               {t("about.whyChooseUs.points", { returnObjects: true }).map(
                 (point, idx) => (
-                  <li key={idx}>{point}</li>
+                  <li key={idx}>
+                    <span className={classes.checkmarkContainer}>
+                      <img src={checkmark} className={classes.checkmark} />
+                    </span>
+                    {point}
+                  </li>
                 )
               )}
             </ul>

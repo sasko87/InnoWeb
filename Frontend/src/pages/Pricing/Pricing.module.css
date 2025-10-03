@@ -13,8 +13,15 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--secondary-color);
-  text-align: justify;
+
   padding: 2rem 4rem 2rem 4rem;
+}
+
+@media screen and (max-width: 600px) {
+  .note {
+    text-align: start;
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -24,9 +31,5 @@
   .pricingCardsContainer {
     display: flex;
     justify-content: center;
-  }
-
-  .note {
-    font-size: 0.8rem;
   }
 }

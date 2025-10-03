@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     // simulate loading (replace with your API calls / setup logic)
-    const timer = setTimeout(() => setLoading(false), 500);
+    const timer = setTimeout(() => setLoading(false), 1500);
     return () => clearTimeout(timer);
   }, []);
 

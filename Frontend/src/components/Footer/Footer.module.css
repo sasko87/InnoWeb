@@ -36,7 +36,6 @@
   font-style: italic;
   font-size: 1.1rem;
   font-weight: 600;
-  text-align: justify;
   color: var(--secondary-color);
   margin: 0;
 }
@@ -128,6 +127,12 @@
   .footerContainer div:last-child {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footerDescription {
+    text-align: start;
   }
 }
 

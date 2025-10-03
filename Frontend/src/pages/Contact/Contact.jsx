@@ -71,7 +71,7 @@ const ContactPage = () => {
         >
           {t("contact.title")}
         </motion.h2>
-        <p>{t("contact.subtitle")}</p>
+        <p className={classes.contactDescription}>{t("contact.subtitle")}</p>
       </div>
       <div className={classes.contactDetails}>
         <form className={classes.form} onSubmit={submitMessage}>
