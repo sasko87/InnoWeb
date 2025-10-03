@@ -11,7 +11,7 @@ const Header = () => {
     setMenuOpen((prev) => !prev);
   };
 
-  const closeMenu = ()=> setMenuOpen(false);
+  const closeMenu = () => setMenuOpen(false);
   return (
     <header className={classes.header}>
       <RouterLink to="/">
@@ -31,12 +31,12 @@ const Header = () => {
         </div>
 
         {menuOpen && (
-  <Modal  onClose={closeMenu}>
-    <div className={classes.mobileMenu}>
-      <Nav onLinkClick={closeMenu} />
-    </div>
-  </Modal>
-)}
+          <Modal onClose={closeMenu}>
+            <div className={classes.mobileMenu}>
+              <Nav onLinkClick={closeMenu} />
+            </div>
+          </Modal>
+        )}
       </div>
     </header>
   );
