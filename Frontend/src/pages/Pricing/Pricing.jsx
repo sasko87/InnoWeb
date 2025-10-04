@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import PricingCard from "../../components/PricingCard/PricingCard";
 import classes from "./Pricing.module.css";
 import { useTranslation } from "react-i18next";
+import Subtitle from "../../components/Subtitle/Subtitle";
 
 const Pricing = () => {
   const { t } = useTranslation();
@@ -11,13 +12,12 @@ const Pricing = () => {
 
   return (
     <div className={classes.page}>
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-      >
-        {t("pricing.title")}
-      </motion.h2>
+      ></motion.h2> */}
+      <Subtitle>{t("pricing.title")}</Subtitle>
 
       <motion.div
         className={classes.cards}

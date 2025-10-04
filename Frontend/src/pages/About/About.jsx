@@ -3,19 +3,21 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import classes from "./About.module.css";
 import checkmark from "/checkmark.gif";
+import Subtitle from "../../components/Subtitle/Subtitle";
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
     <div className={classes.aboutContainer}>
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         {t("about.title")}
-      </motion.h2>
+      </motion.h2> */}
+      <Subtitle>{t("about.title")}</Subtitle>
 
       <motion.p
         className={classes.paragraphOne}
@@ -57,14 +59,15 @@ const About = () => {
       </motion.div>
 
       <div className={classes.whyChooseUsContainer}>
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
         >
           {t("about.whyChooseUs.title")}
-        </motion.h2>
+        </motion.h2> */}
+        <Subtitle>{t("about.whyChooseUs.title")}</Subtitle>
 
         <div className={classes.whyChooseUsContent}>
           <motion.div
