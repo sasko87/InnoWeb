@@ -16,6 +16,9 @@ export default function Background({
   const currentOpacitiesRef = useRef([]);
   const mouseRef = useRef({ x: 0, y: 0 });
 
+  const heroCometsRef = useRef([]);
+  const sectionCometsRef = useRef([]);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -24,7 +27,7 @@ export default function Background({
     const starCtx = starCanvas.getContext("2d");
     starCanvasRef.current = starCanvas;
 
-    const clusterCount = 3; // number of nebula clusters
+    const clusterCount = 3;
     nebulaCanvasesRef.current = [];
     targetOpacitiesRef.current = [];
     currentOpacitiesRef.current = [];
@@ -40,9 +43,7 @@ export default function Background({
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
 
-      // Make nebula bigger on small screens
       const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
-
       nebulaCanvasesRef.current.forEach((nebCanvas) => {
         nebCanvas.width = window.innerWidth * sizeMultiplier;
         nebCanvas.height = window.innerHeight * sizeMultiplier;
@@ -108,18 +109,14 @@ export default function Background({
 
       const centerX = w / 2;
       const centerY = h / 2;
-
-      // Increase blobs on small screens
       const blobCount = window.innerWidth < 768 ? 25 : 15;
 
       for (let i = 0; i < blobCount; i++) {
         const offsetX = rand(-w * 0.3, w * 0.3);
         const offsetY = rand(-h * 0.3, h * 0.3);
         const radius = rand(w * 0.25, w * 0.55);
-
         const baseAlpha = window.innerWidth < 768 ? 0.08 : 0.04;
         const alpha = rand(baseAlpha, baseAlpha + 0.1);
-
         const hueShift = rand(-10, 10);
         const color = `hsla(${200 + hueShift}, 80%, 30%, ${alpha})`;
 
@@ -152,26 +149,64 @@ export default function Background({
     function handleScroll() {
       const scrollTop = window.scrollY;
       const sectionHeight = window.innerHeight;
-      const totalSections = 8;
 
       nebulaCanvasesRef.current.forEach((_, i) => {
         let opacity = 0;
-
         if (scrollTop >= sectionHeight && scrollTop < sectionHeight * 4) {
-          // Sections 2–4 -> fade in
           opacity = (scrollTop - sectionHeight) / (sectionHeight * 3);
         } else if (
           scrollTop >= sectionHeight * 4 &&
           scrollTop < sectionHeight * 8
         ) {
-          // Sections 5–8 -> fade out
           opacity = 1 - (scrollTop - sectionHeight * 4) / (sectionHeight * 4);
         } else {
-          opacity = 0; // Section 1 or beyond 8
+          opacity = 0;
         }
-
         targetOpacitiesRef.current[i] = Math.min(Math.max(opacity, 0), 1);
       });
+
+      // hero comets (section 1)
+      if (scrollTop < sectionHeight) {
+        if (heroCometsRef.current.length === 0) {
+          for (let i = 0; i < 2; i++) {
+            heroCometsRef.current.push({
+              x: -300 - i * 200,
+              y: window.innerHeight - rand(50, 200),
+              vx: 1.5 + rand(0, 1), // slow
+              vy: -0.3 - rand(0, 0.3),
+              length: 200 + rand(0, 50),
+              size: 4 + rand(0, 1),
+            });
+          }
+        }
+      } else {
+        heroCometsRef.current = [];
+      }
+
+      // section comets (sections 6–8)
+      const cometSections = [5, 6, 7];
+      const inCometSection = cometSections.some(
+        (sec) =>
+          scrollTop >= sectionHeight * sec &&
+          scrollTop < sectionHeight * (sec + 1)
+      );
+
+      if (inCometSection) {
+        if (sectionCometsRef.current.length === 0) {
+          for (let i = 0; i < 3; i++) {
+            sectionCometsRef.current.push({
+              x: -300 - i * 150,
+              y: window.innerHeight + rand(0, 200),
+              vx: 2 + rand(0, 1),
+              vy: -0.5 + rand(-0.2, 0.2),
+              length: 250 + rand(0, 50),
+              size: 5 + rand(0, 2),
+            });
+          }
+        }
+      } else {
+        sectionCometsRef.current = [];
+      }
     }
 
     function handleMouseMove(e) {
@@ -188,7 +223,6 @@ export default function Background({
       const h = canvas.height;
       ctx.clearRect(0, 0, w, h);
 
-      // Background gradient
       const grad = ctx.createLinearGradient(0, 0, 0, h);
       grad.addColorStop(0, "#02030a");
       grad.addColorStop(1, "#000000");
@@ -223,17 +257,13 @@ export default function Background({
       });
       ctx.globalAlpha = 1;
 
-      // Draw stars
       starsRef.current.forEach((s) => {
         const px = cx + (s.nx * w) / 2 + mx * parallaxStrength * s.z;
         const py = cy + (s.ny * h) / 2 + my * parallaxStrength * s.z;
-
         const driftX = Math.sin(timeFactor + s.phase) * 0.3 * (1 - s.z);
         const driftY = Math.cos(timeFactor + s.phase) * 0.3 * (1 - s.z);
-
         const finalX = px + driftX;
         const finalY = py + driftY;
-
         const pulse =
           0.6 + 0.4 * Math.sin(now * 0.002 * (s.pulse * 3) + s.phase);
         const radius = Math.max(0.3, s.size * pulse);
@@ -246,6 +276,70 @@ export default function Background({
           drawSize,
           drawSize
         );
+      });
+
+      // draw hero comets (less visible)
+      heroCometsRef.current.forEach((c) => {
+        c.x += c.vx;
+        c.y += c.vy;
+
+        const cometGrad = ctx.createLinearGradient(
+          c.x,
+          c.y,
+          c.x - c.length,
+          c.y + c.length * 0.5
+        );
+        cometGrad.addColorStop(0, "rgba(255,255,255,0.25)");
+        cometGrad.addColorStop(1, "rgba(255,255,255,0)");
+
+        ctx.strokeStyle = cometGrad;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(c.x - c.length, c.y + c.length * 0.5);
+        ctx.lineTo(c.x, c.y);
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(255,255,255,0.3)";
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.size * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (c.x > w + 200 || c.y < -200) {
+          c.x = -300;
+          c.y = h - rand(50, 200);
+        }
+      });
+
+      // draw section comets (6–8)
+      sectionCometsRef.current.forEach((c) => {
+        c.x += c.vx;
+        c.y += c.vy;
+
+        const cometGrad = ctx.createLinearGradient(
+          c.x,
+          c.y,
+          c.x - c.length,
+          c.y + c.length * 0.5
+        );
+        cometGrad.addColorStop(0, "rgba(255,255,255,0.25)");
+        cometGrad.addColorStop(1, "rgba(255,255,255,0)");
+
+        ctx.strokeStyle = cometGrad;
+        ctx.lineWidth = 2.5;
+        ctx.beginPath();
+        ctx.moveTo(c.x - c.length, c.y + c.length * 0.5);
+        ctx.lineTo(c.x, c.y);
+        ctx.stroke();
+
+        ctx.fillStyle = "rgba(255,255,255,0.3)";
+        ctx.beginPath();
+        ctx.arc(c.x, c.y, c.size * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (c.x > w + 300 || c.y < -300) {
+          c.x = -300;
+          c.y = h + rand(0, 200);
+        }
       });
 
       rafRef.current = requestAnimationFrame(draw);

@@ -1,5 +1,5 @@
 import classes from "./Hero.module.css";
-import HeroImg from "../../assets/hero-image.webp";
+import HeroImg from "../../assets/hero-img2.webp";
 import Card from "../Card/Card.jsx";
 import MaintainanceImg from "../../assets/maintainance.webp";
 import MobileImg from "../../assets/mobile.webp";
@@ -7,6 +7,13 @@ import CustomDesignImg from "../../assets/custom-design.webp";
 import IotImg from "../../assets/IOT.webp";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import reactImg from "../../assets/React.webp";
+import cssImg from "../../assets/CSS.webp";
+import nodeImg from "../../assets/Nodejs.webp";
+import wordpressImg from "../../assets/wordpress.webp";
+import mongoImg from "../../assets/MongoDB.webp";
+import jsImg from "../../assets/JavaScript.webp";
+import tailwindImg from "../../assets/Tailwind.webp";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -85,7 +92,19 @@ const Hero = () => {
         transition={{ duration: 0.15, delay: 0.5 }}
         className={classes.HeroImageContainer}
       >
-        <img src={HeroImg} alt="Hero" loading="eager" />
+        <img
+          src={HeroImg}
+          alt="Hero"
+          loading="eager"
+          className={classes.heroImage}
+        />
+        <img src={reactImg} alt="" className={classes.reactImg} />
+        <img src={cssImg} alt="" className={classes.cssImg} />
+        <img src={wordpressImg} alt="" className={classes.wordpressImg} />
+        <img src={nodeImg} alt="" className={classes.nodeImg} />
+        <img src={jsImg} alt="" className={classes.jsImg} />
+        {/* <img src={mongoImg} alt="" className={classes.mongoImg} /> */}
+        <img src={tailwindImg} alt="" className={classes.tailwindImg} />
       </motion.picture>
     </motion.main>
   );
