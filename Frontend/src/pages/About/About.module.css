@@ -125,6 +125,7 @@
   .card {
     height: 13rem;
     flex: 1;
+    margin-left: 2rem;
   }
 }
 
@@ -138,6 +139,7 @@
     width: 24rem;
     height: auto;
     padding: 1.5rem;
+    margin-left: 0;
   }
 }
 

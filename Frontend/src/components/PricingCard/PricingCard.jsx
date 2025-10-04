@@ -5,13 +5,17 @@ import classes from "./PricingCard.module.css";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-const PricingCard = ({ category, title, features, price }) => {
+const PricingCard = ({ category, title, features, price, modalClose }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   const handleOrderClick = () => {
     const service = `${category} ${title}`;
     navigate(`contact?service=${encodeURIComponent(service)}`);
+
+    if (modalClose) {
+      modalClose();
+    }
   };
   return (
     <>

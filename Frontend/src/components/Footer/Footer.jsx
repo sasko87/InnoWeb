@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import logoImg from "../../assets/logoFooter.webp";
 import classes from "./Footer.module.css";
 import { useTranslation } from "react-i18next";
+import Modal from "../Modal/Modal";
+import PricingCard from "../PricingCard/PricingCard";
 
 const Footer = () => {
   const { t } = useTranslation();
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  const plans = t("pricing.plans", { returnObjects: true });
 
+  const handleServiceClick = (service) => {
+    const matches = plans.filter(
+      (plan) =>
+        plan.category === service ||
+        plan.category.includes(service) ||
+        service.includes(plan.category)
+    );
+
+    setSelectedPlan(matches.length > 0 ? matches : null);
+  };
+
+  const handleClose = () => setSelectedPlan(null);
   return (
     <>
       <div className={classes.footerDivider}></div>{" "}
@@ -30,7 +46,13 @@ const Footer = () => {
             <ul>
               {t("footer.services.list", { returnObjects: true }).map(
                 (service, idx) => (
-                  <li key={idx}>{service}</li>
+                  <li
+                    className={classes.footerServicesList}
+                    key={idx}
+                    onClick={() => handleServiceClick(service)}
+                  >
+                    {service}
+                  </li>
                 )
               )}
             </ul>
@@ -77,6 +99,27 @@ const Footer = () => {
 
         <p className={classes.footerBottom}>{t("footer.rights")}</p>
       </footer>
+      {selectedPlan && (
+        <Modal
+          active={!!selectedPlan}
+          onClose={handleClose}
+          className={classes.footerModal}
+          closeButton
+        >
+          {selectedPlan.map((plan, idx) => {
+            return (
+              <PricingCard
+                key={idx}
+                category={plan.category}
+                title={plan.title}
+                features={plan.features}
+                price={plan.price}
+                modalClose={handleClose}
+              />
+            );
+          })}
+        </Modal>
+      )}
     </>
   );
 };
