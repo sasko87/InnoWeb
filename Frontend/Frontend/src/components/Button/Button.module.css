@@ -1,0 +1,31 @@
+button {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: white;
+  background: var(--background-gradient);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(18, 175, 239, 0.4);
+}
+
+.mainButton {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 15px;
+  gap: 10px;
+  color: black;
+  background: var(--primary-color);
+}
+
+.mainButton:hover {
+  background: var(--background-gradient);
+}

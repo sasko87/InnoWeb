@@ -1,0 +1,246 @@
+.aboutContainer {
+  min-height: 100vh;
+  padding: 3rem 8rem;
+}
+
+.paragraphOne {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: start;
+  margin-bottom: 0;
+  margin-top: 0;
+  /* text-align: center; */
+}
+
+.paragraphTwo {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 3rem; */
+  margin: 4rem 0;
+  flex: 1;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  width: 40%;
+
+  color: var(--secondary-color);
+  transition: transform 0.5s ease;
+  transform: rotate(0deg);
+}
+
+.card:hover {
+  animation: sway 1s ease-in-out forwards;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-3deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.card .paragraphTwo {
+  font-size: 1rem;
+}
+
+.whyChooseUsContainer {
+  text-align: center;
+  padding: 3rem 5rem;
+}
+
+.whyChooseUsContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* gap: 7rem; */
+}
+
+.whyLeft,
+.whyRight {
+  max-width: 31rem;
+}
+
+.whyLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.whyRight ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.whyRight li {
+  font-weight: 600;
+  font-size: 1.18rem;
+  margin-bottom: 0.6rem;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  /* text-align: justify; */
+  font-style: italic;
+  text-align: start;
+}
+
+.checkmarkContainer {
+  display: inline-block;
+}
+
+.whyRight li {
+  display: flex;
+  align-items: center;
+}
+
+.checkmark {
+  width: 45px;
+}
+
+@media (max-width: 1520px) {
+  .card {
+    height: 13rem;
+    flex: 1;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards {
+    justify-content: space-evenly;
+    gap: 3rem;
+  }
+
+  .card {
+    width: 24rem;
+    height: auto;
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .aboutContainer {
+    padding: 2rem 4rem;
+  }
+
+  .subTitle {
+    font-size: 3rem;
+  }
+
+  .paragraphOne {
+    font-size: 1.4rem;
+  }
+
+  .paragraphTwo {
+    font-size: 1rem;
+  }
+
+  .whyChooseUsContainer {
+    padding: 2rem 3rem;
+  }
+
+  .whyRight li {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 2rem;
+  }
+
+  .subTitle {
+    font-size: 2.2rem;
+  }
+
+  .paragraphOne {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .paragraphTwo {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+
+  .cards {
+    flex-direction: column;
+    gap: 2rem;
+    width: 90%;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  .whyChooseUsContainer {
+    padding: 1.5rem;
+  }
+
+  .whyChooseUsContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .whyLeft,
+  .whyRight {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .whyRight li {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .whyRight li {
+    text-align: start;
+  }
+}
+
+@media (max-width: 430px) {
+  .aboutContainer {
+    padding: 0.9rem;
+  }
+  .paragraphOne {
+    font-size: 22px;
+    margin-bottom: 0.3rem;
+  }
+
+  .paragraphTwo {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .whyChooseUsContainer {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,154 @@
+.footerDivider {
+  height: 3px;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary-color),
+    var(--secondary-color),
+    transparent
+  );
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 4rem;
+}
+
+.footerSectionLogo {
+  position: relative;
+  max-width: 24rem;
+  top: -2rem;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+
+  flex-shrink: 0;
+  margin: 2rem auto;
+}
+
+.footerDescription {
+  font-style: italic;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin: 0;
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 24rem;
+}
+
+.footerSection h3 {
+  color: var(--secondary-color);
+  font-size: 2.4rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 2;
+}
+
+.footerSection a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.footerSection a:hover {
+  text-decoration: underline;
+}
+
+.footerSection span {
+  margin-bottom: 1rem;
+}
+
+.social {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.social p {
+  color: var(--primary-color);
+}
+
+.social a {
+  color: var(--secondary-color);
+}
+
+.separator {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.socialContact {
+  display: flex;
+  justify-content: center;
+}
+
+.footerBottom {
+  text-align: center;
+  padding-bottom: 1.1rem;
+  padding-top: 3rem;
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+.footerServicesList {
+  cursor: pointer;
+}
+
+.footerModal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footerContainer {
+    margin: auto;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footerContainer div:nth-child(2) {
+    display: none;
+  }
+
+  .footerContainer div:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footerDescription {
+    text-align: start;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .footerContainer {
+    padding: 0 1rem;
+  }
+}
