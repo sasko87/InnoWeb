@@ -274,7 +274,7 @@ export default function Background({
         top: 0,
         left: 0,
         width: "100%",
-        height: "100dvh",
+        height: `${window.innerHeight}px`,
         zIndex: -1,
         pointerEvents: "none",
       }}
