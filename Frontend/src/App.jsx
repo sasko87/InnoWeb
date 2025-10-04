@@ -6,7 +6,7 @@ import ScrollToTop from "./components/Scroll/ScrollToTop";
 import Contact from "./pages/Contact/Contact";
 import HomePage from "./pages/HomePage/HomePage";
 // import ChatAI from "./components/ChatAI/ChatAI";
-import Background from "../Background/Background";
+import Background from "../Background/Background3";
 import Loader from "./components/Loader/Loader";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 

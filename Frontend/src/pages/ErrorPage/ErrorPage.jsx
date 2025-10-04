@@ -48,7 +48,12 @@ const ErrorPage = () => {
 
   return (
     <div className={classes.errorPage}>
-      <img src={errorImg} alt="404 image" className={classes.errorImg} />
+      <img
+        src={errorImg}
+        alt="404 image"
+        className={classes.errorImg}
+        loading="lazy"
+      />
       <motion.div
         className={classes.errorContainer}
         variants={containerVariants}
@@ -95,8 +100,18 @@ const ErrorPage = () => {
           Go Home
         </Button>
       </motion.div>
-      <img src={spaceman} alt="" className={classes.spacemanLeft} />
-      <img src={spaceman} alt="" className={classes.spacemanRight} />
+      <img
+        src={spaceman}
+        alt="spaceman"
+        className={classes.spacemanLeft}
+        loading="lazy"
+      />
+      <img
+        src={spaceman}
+        alt="spaceman"
+        className={classes.spacemanRight}
+        loading="lazy"
+      />
     </div>
   );
 };
