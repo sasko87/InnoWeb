@@ -4,6 +4,7 @@ import { useSwipeable } from "react-swipeable";
 import classes from "./Projects.module.css";
 import monitor from "../../assets/monitor.webp";
 import { useTranslation } from "react-i18next";
+import Subtitle from "../../components/Subtitle/Subtitle";
 
 const projectImages = import.meta.glob(
   "../../assets/projects/*.{jpg,jpeg,webp}",
@@ -135,13 +136,14 @@ const Projects = () => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         {t("projects.title")}
-      </motion.h2>
+      </motion.h2> */}
+      <Subtitle>{t("projects.title")}</Subtitle>
 
       {!isMobile ? (
         <>

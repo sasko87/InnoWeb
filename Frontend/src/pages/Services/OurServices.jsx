@@ -3,6 +3,7 @@ import ServiceCard from "../../components/ServiceCard/ServiceCard";
 import classes from "./OurServices.module.css";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Subtitle from "../../components/Subtitle/Subtitle";
 
 const OurServices = () => {
   const { t } = useTranslation();
@@ -17,13 +18,14 @@ const OurServices = () => {
 
   return (
     <div className={classes.ourServices}>
-      <motion.h2
+      {/* <motion.h2
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
         {t("services.title")}
-      </motion.h2>
+      </motion.h2> */}
+      <Subtitle>{t("services.title")}</Subtitle>
 
       <div className={classes.serviceCards}>
         {services.map(({ key }, index) => (
