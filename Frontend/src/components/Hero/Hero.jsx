@@ -10,8 +10,7 @@ import { useTranslation } from "react-i18next";
 import reactImg from "../../assets/React.webp";
 import cssImg from "../../assets/CSS.webp";
 import nodeImg from "../../assets/Nodejs.webp";
-import wordpressImg from "../../assets/wordpress.webp";
-import mongoImg from "../../assets/MongoDB.webp";
+import wordpressImg from "../../assets/WordPress.webp";
 import jsImg from "../../assets/JavaScript.webp";
 import tailwindImg from "../../assets/Tailwind.webp";
 
