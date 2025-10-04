@@ -17,19 +17,6 @@ export default function Background({
   const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
-    function updateHeight() {
-      if (canvasRef.current) {
-        canvasRef.current.style.height = `${window.innerHeight * 1.2}px`;
-      }
-    }
-
-    window.addEventListener("resize", updateHeight);
-    updateHeight(); // initial call
-
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
-
-  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
@@ -51,7 +38,7 @@ export default function Background({
 
     function resize() {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight * 1.3;
 
       // Make nebula bigger on small screens
       const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
@@ -287,7 +274,7 @@ export default function Background({
         top: 0,
         left: 0,
         width: "100%",
-
+        height: "120%",
         zIndex: -1,
         pointerEvents: "none",
       }}
