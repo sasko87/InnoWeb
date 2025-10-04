@@ -17,6 +17,19 @@ export default function Background({
   const mouseRef = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
+    function updateHeight() {
+      if (canvasRef.current) {
+        canvasRef.current.style.height = `${window.innerHeight}px`;
+      }
+    }
+
+    window.addEventListener("resize", updateHeight);
+    updateHeight(); // initial call
+
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
+  useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
