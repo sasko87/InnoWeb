@@ -8,6 +8,7 @@ import HomePage from "./pages/HomePage/HomePage";
 // import ChatAI from "./components/ChatAI/ChatAI";
 import Background from "../Background/Background";
 import Loader from "./components/Loader/Loader";
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
           <Footer />
         </div>
