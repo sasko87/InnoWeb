@@ -19,7 +19,7 @@ export default function Background({
   useEffect(() => {
     function updateHeight() {
       if (canvasRef.current) {
-        canvasRef.current.style.height = `${window.innerHeight}px`;
+        canvasRef.current.style.height = `${window.innerHeight * 1.2}px`;
       }
     }
 
@@ -287,7 +287,7 @@ export default function Background({
         top: 0,
         left: 0,
         width: "100%",
-        height: `${window.innerHeight}px`,
+
         zIndex: -1,
         pointerEvents: "none",
       }}
