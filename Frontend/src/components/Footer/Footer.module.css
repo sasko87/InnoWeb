@@ -111,6 +111,17 @@
   color: var(--secondary-color);
 }
 
+.footerServicesList {
+  cursor: pointer;
+}
+
+.footerModal {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
 @media screen and (max-width: 1200px) {
   .footerContainer {
     margin: auto;
