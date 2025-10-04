@@ -5,11 +5,13 @@
   border-radius: 1rem;
 
   width: 18rem;
-  height: 400px;
+  height: 500px;
+    /* max-height: 100%; */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  justify-content: space-between;
 }
 
 .category {
@@ -19,6 +21,7 @@
   font-weight: 600;
   border-radius: 1rem;
   padding: 0;
+    text-align: center;
 }
 
 .title {
@@ -39,6 +42,9 @@
   color: var(--primary-color);
   text-align: start;
   line-height: 1.5rem;
+    flex-grow: 1;
+ 
+
 }
 
 .price {
