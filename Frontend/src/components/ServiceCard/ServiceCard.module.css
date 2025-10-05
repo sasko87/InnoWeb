@@ -60,7 +60,8 @@
 
 @media screen and (max-width: 993px) {
   .card {
-    width: 100%;
+    width: 90%;
+    margin: 0 1rem;
   }
 }
 
