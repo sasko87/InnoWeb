@@ -61,6 +61,7 @@
   .card {
     width: 90%;
     min-height: 25rem;
+    min-width: 12rem;
     margin: 0 1rem;
   }
   .category {
