@@ -115,7 +115,8 @@
         "title": "PREMIUM",
         "features": [
           "Multilingual version",
-          "Unlimited pages and advanced functionalities",
+          "Unlimited pages",
+          "Advanced functionalities",
           "Custom integrations",
           "Unlimited photos",
           "Advanced SEO optimization",
@@ -134,34 +135,6 @@
           "Responsive design for all devices",
           "24/7 technical support",
           "Performance monitoring"
-        ],
-        "price": "by Agreement"
-      },
-      {
-        "category": "Maintenance",
-        "title": "PREMIUM",
-        "features": [
-          "Regular website updates and backups",
-          "Bug fixes and security improvements",
-          "Content updates upon request",
-          "Monitoring and performance optimization",
-          "SEO performance tracking",
-          "24/7 technical support",
-          "Monthly maintenance reports"
-        ],
-        "price": "4000 MKD/month"
-      },
-      {
-        "category": "Custom Design",
-        "title": "PREMIUM",
-        "features": [
-          "Unique web design",
-          "Custom UI/UX optimized for your brand",
-          "Responsive design for all devices",
-          "Integration with your existing branding",
-          "Interactive and modern layouts",
-          "24/7 design support",
-          "Delivery-ready design assets"
         ],
         "price": "by Agreement"
       }
