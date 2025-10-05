@@ -5,7 +5,7 @@ import RocketImg from "/Rocket.gif";
 function Loader() {
   return (
     <div className={classes.loaderContainer}>
-      <img src={RocketImg} alt="" />
+      <img src={RocketImg} alt="Rocket Icon" />
       <p className={classes.loaderText}>Loading...</p>
     </div>
   );

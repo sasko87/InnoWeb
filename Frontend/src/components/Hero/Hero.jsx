@@ -97,13 +97,21 @@ const Hero = () => {
           loading="eager"
           className={classes.heroImage}
         />
-        <img src={reactImg} alt="" className={classes.reactImg} />
-        <img src={cssImg} alt="" className={classes.cssImg} />
-        <img src={wordpressImg} alt="" className={classes.wordpressImg} />
-        <img src={nodeImg} alt="" className={classes.nodeImg} />
-        <img src={jsImg} alt="" className={classes.jsImg} />
-        {/* <img src={mongoImg} alt="" className={classes.mongoImg} /> */}
-        <img src={tailwindImg} alt="" className={classes.tailwindImg} />
+        <img src={reactImg} alt="React Icon" className={classes.reactImg} />
+        <img src={cssImg} alt="Css Icon" className={classes.cssImg} />
+        <img
+          src={wordpressImg}
+          alt="Wordpress Icon"
+          className={classes.wordpressImg}
+        />
+        <img src={nodeImg} alt="Node.js Icon" className={classes.nodeImg} />
+        <img src={jsImg} alt="Javascript Icon" className={classes.jsImg} />
+        {/* <img src={mongoImg} alt="MongoDB Icon" className={classes.mongoImg} /> */}
+        <img
+          src={tailwindImg}
+          alt="Tailwind Icon"
+          className={classes.tailwindImg}
+        />
       </motion.picture>
     </motion.main>
   );

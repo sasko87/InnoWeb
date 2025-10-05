@@ -4,6 +4,8 @@ import classes from "./Footer.module.css";
 import { useTranslation } from "react-i18next";
 import Modal from "../Modal/Modal";
 import PricingCard from "../PricingCard/PricingCard";
+import { BsFacebook } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -41,7 +43,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className={classes.footerSection}>
+          <div className={`${classes.footerSection} ${classes.footerServices}`}>
             <h3>{t("footer.services.title")}</h3>
             <ul>
               {t("footer.services.list", { returnObjects: true }).map(
@@ -59,40 +61,44 @@ const Footer = () => {
           </div>
 
           <div className={classes.footerSection}>
-            <h3 className={classes.footerSectionTitle}>
-              {t("footer.contact.title")}
-            </h3>
-            <span>
-              <a href="mailto:support@yourcompany.com">
-                {t("footer.contact.email")}: support@yourcompany.com
-              </a>
-            </span>
-            <span>
-              <a href="tel:+38970123456">
-                {t("footer.contact.phone")}: +389 70 123 456
-              </a>
-            </span>
-            <div className={classes.social}>
+            <div className={classes.footerContactContainer}>
+              <h3 className={classes.footerSectionTitle}>
+                {t("footer.contact.title")}
+              </h3>
+
+              <p>{t("footer.contact.email")}: support@yourcompany.com</p>
+
+              <p>tel:+38970123456</p>
               <a className={classes.socialContact} href="/contact">
                 {t("footer.contactPage")} →
               </a>
+            </div>
+            <div className={classes.social}>
               <p>{t("footer.follow")}</p>
-              🌐
-              <a
-                href="https://www.facebook.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Facebook
-              </a>
-              <span className={classes.separator}> | </span>
-              <a
-                href="https://www.instagram.com/yourpage"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram
-              </a>
+              <div className={classes.socialMedia}>
+                🌐
+                <a
+                  href="https://www.facebook.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+                <span className={classes.separator}> | </span>
+                <a
+                  href="https://www.instagram.com/yourpage"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </div>
+              <span className={classes.facebookIcon}>
+                <BsFacebook />
+              </span>
+              <span className={classes.instagramIcon}>
+                <FaInstagram />
+              </span>
             </div>
           </div>
         </div>
