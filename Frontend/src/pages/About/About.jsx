@@ -97,7 +97,11 @@ const About = () => {
                 (point, idx) => (
                   <li key={idx}>
                     <span className={classes.checkmarkContainer}>
-                      <img src={checkmark} className={classes.checkmark} />
+                      <img
+                        src={checkmark}
+                        alt="checkmark"
+                        className={classes.checkmark}
+                      />
                     </span>
                     {point}
                   </li>

@@ -41,7 +41,7 @@ export default function Background({
 
     function resize() {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight * 1.2;
 
       const sizeMultiplier = window.innerWidth < 768 ? 2 : 1.5;
       nebulaCanvasesRef.current.forEach((nebCanvas) => {
@@ -365,10 +365,10 @@ export default function Background({
     <div
       style={{
         position: "fixed",
-        top: 0,
-        left: 0,
+        // top: 0,
+        // left: 0,
         width: "100%",
-        height: "100%",
+        height: "120%",
         zIndex: -1,
         pointerEvents: "none",
       }}
