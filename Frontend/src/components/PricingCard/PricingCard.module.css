@@ -76,15 +76,13 @@
 
 @media screen and (max-width: 600px) {
   .card {
-    width: 20rem;
-    min-height: 25rem;
-    min-width: 12rem;
+    min-width: 19rem;
   }
 }
 
 @media screen and (max-width: 430px) {
   .card {
-    width: 90%;
+    flex: 1;
     min-height: 25rem;
     min-width: 12rem;
     margin: 0 1rem;
