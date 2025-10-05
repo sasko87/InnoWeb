@@ -1,7 +1,6 @@
 .card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-
   min-height: 20px;
   padding: 24px;
   text-align: left;
@@ -58,10 +57,26 @@
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .description {
+    font-size: 1rem;
+    padding: 0.5rem 0 0 0;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .card {
+    height: 230px;
+  }
+}
+
 @media screen and (max-width: 993px) {
   .card {
     width: 90%;
     margin: 0 1rem;
+    height: auto;
   }
 }
 
