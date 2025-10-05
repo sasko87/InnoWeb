@@ -1,3 +1,6 @@
+nav {
+  position: relative;
+}
 .navList {
   list-style: none;
   padding: 0 2.5rem 0 0;
