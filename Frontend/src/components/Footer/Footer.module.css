@@ -11,6 +11,10 @@
   );
 }
 
+.footerDividerBottom {
+  margin: 1rem 1rem 0 1rem;
+}
+
 .footerContainer {
   display: flex;
   justify-content: space-between;
@@ -27,9 +31,8 @@
 .logo {
   width: 100%;
   height: auto;
-
   flex-shrink: 0;
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
 }
 
 .footerDescription {
@@ -63,24 +66,23 @@
   line-height: 2;
 }
 
-.footerSection a {
-  color: var(--primary-color);
-  text-decoration: none;
+.footerContactContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.footerContactContainer p {
   font-size: 1.1rem;
   font-weight: 600;
-}
-
-.footerSection a:hover {
-  text-decoration: underline;
-}
-
-.footerSection span {
-  margin-bottom: 1rem;
+  color: var(--primary-color);
+  padding: 0.3rem;
 }
 
 .social {
   font-size: 1.1rem;
   font-weight: 600;
+  align-self: flex-start;
 }
 
 .social p {
@@ -99,6 +101,11 @@
 .socialContact {
   display: flex;
   justify-content: center;
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1rem;
 }
 
 .footerBottom {
@@ -122,28 +129,105 @@
   gap: 10px;
 }
 
+.facebookIcon,
+.instagramIcon {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .footerContainer {
-    margin: auto;
+    /* margin: auto;
     gap: 3rem;
+    align-items: center; */
+    justify-content: space-around;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    padding: 0 2rem;
   }
 
-  .footerContainer div:nth-child(2) {
+  .footerDescription {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .footerServices {
     display: none;
   }
 
-  .footerContainer div:last-child {
+  /* .footerContainer div:last-child {
     margin-left: auto;
     margin-right: auto;
+  } */
+}
+
+@media screen and (max-width: 993px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .footerSectionLogo {
+    max-width: 100%;
+  }
+
+  .logo {
+    width: 70%;
+    margin-bottom: 0.8rem;
+  }
+
+  .social {
+    align-self: center;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .socialMedia {
+    display: none;
+  }
+  .facebookIcon,
+  .instagramIcon {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .facebookIcon:hover,
+  .instagramIcon:hover {
+    color: var(--primary-color);
   }
 }
 
 @media screen and (max-width: 600px) {
+  .footerSection {
+    max-width: 100%;
+    width: 100%;
+  }
   .footerDescription {
     text-align: start;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+
+  .social p {
+    font-size: 1rem;
+    padding-right: 0;
+  }
+
+  .social {
+    justify-content: end;
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+
+  .footerBottom {
+    padding-top: 0.6rem;
+    font-size: 0.6rem;
   }
 }
 

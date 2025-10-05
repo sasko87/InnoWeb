@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className={classes.header}>
       <RouterLink to="/">
-        <img src="/logo.png" alt="InnoWeb Logo" className={classes.logoLogo} />
+        <img src="/logo.webp" alt="InnoWeb Logo" className={classes.logoLogo} />
       </RouterLink>
       <div className={classes.mainNav}>
         <Nav />

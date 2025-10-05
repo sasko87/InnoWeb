@@ -1,7 +1,8 @@
 .logoLogo {
-  height: 4rem;
-  width: 15rem;
-  padding-left: 1.5rem;
+  height: 5rem;
+  width: 18rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 .mobileNav {
@@ -44,6 +45,11 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .logoLogo {
+    width: 15rem;
+    height: 4rem;
+  }
+
   .mainNav {
     display: none;
   }
@@ -55,15 +61,17 @@
 
 @media screen and (max-width: 430px) {
   .logoLogo {
-    width: 8rem;
+    width: 10rem;
     height: 3rem;
+    margin-left: 0.5rem;
   }
 }
 
 @media screen and (max-width: 280px) {
   .logoLogo {
     width: 6rem;
-    height: 3rem;
+    height: 2.5rem;
+    margin-left: 0.5rem;
   }
 
   .hamburger {
