@@ -5,8 +5,8 @@
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
+  gap: 4rem;
 }
 
 .note {
@@ -17,18 +17,6 @@
   padding: 2rem 4rem 2rem 4rem;
 }
 
-@media screen and (max-width: 1200px) {
-  .cards {
-    gap: 4rem;
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: 850px) {
-  .cards {
-    gap: 2rem;
-  }
-}
 @media screen and (max-width: 600px) {
   .note {
     text-align: start;
