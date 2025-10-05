@@ -102,7 +102,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
+        <div
+          className={`${classes.footerDivider} ${classes.footerDividerBottom}`}
+        ></div>
         <p className={classes.footerBottom}>{t("footer.rights")}</p>
       </footer>
       {selectedPlan && (
