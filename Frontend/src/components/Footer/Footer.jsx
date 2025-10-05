@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logoImg from "../../assets/logoFooter.webp";
+import logoImg from "/logo.webp";
 import classes from "./Footer.module.css";
 import { useTranslation } from "react-i18next";
 import Modal from "../Modal/Modal";

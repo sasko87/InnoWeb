@@ -365,8 +365,8 @@ export default function Background({
     <div
       style={{
         position: "fixed",
-        // top: 0,
-        // left: 0,
+        top: -2,
+        left: 0,
         width: "100%",
         height: "120%",
         zIndex: -1,
