@@ -25,7 +25,8 @@
     padding: 1.5rem;
   }
   .serviceCards {
-    max-width: 900px;
+    max-width: 100%;
+    /* min-height: 230px; */
     align-items: center;
     justify-content: center;
   }
