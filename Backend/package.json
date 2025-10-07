@@ -13,10 +13,10 @@
   "dependencies": {
     "axios": "^1.12.2",
     "cors": "^2.8.5",
-    "dotenv": "^17.2.2",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "nodemailer": "^7.0.6",
-    "openai": "^5.23.0",
+    "nodemailer": "^7.0.7",
+    "openai": "^5.23.2",
     "react-i18next": "^15.7.3",
     "socket.io": "^4.8.1"
   }

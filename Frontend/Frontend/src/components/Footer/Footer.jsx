@@ -63,13 +63,14 @@ const Footer = () => {
               {t("footer.contact.title")}
             </h3>
             <span>
-              <a href="mailto:support@yourcompany.com">
-                {t("footer.contact.email")}: support@yourcompany.com
+              <a href="innowebmk@gmail.com">
+                {t("footer.contact.email")}: innowebmk@gmail.com
               </a>
             </span>
             <span>
-              <a href="tel:+38970123456">
-                {t("footer.contact.phone")}: +389 70 123 456
+              <a href="tel:+38978299456 +38977754050 +38975217227
+              </a>">
+                {t("footer.contact.phone")}: +38978299456 +38977754050 +38975217227
               </a>
             </span>
             <div className={classes.social}>
@@ -87,7 +88,7 @@ const Footer = () => {
               </a>
               <span className={classes.separator}> | </span>
               <a
-                href="https://www.instagram.com/yourpage"
+                href="https://www.instagram.com/inno_webmk/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
