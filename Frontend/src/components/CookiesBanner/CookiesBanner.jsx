@@ -3,10 +3,13 @@ import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import classes from "./CookiesBanner.module.css";
+import { useTranslation } from "react-i18next";
+
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
   const portalRoot = document.getElementById("cookies");
+  const { t } = useTranslation();
 
   useEffect(() => {
     const stored = localStorage.getItem("cookiesAccepted");
@@ -47,14 +50,14 @@ export default function CookieBanner() {
           className={classes.cookiesBanner}
         >
           <p className={classes.cookiesText}>
-            Користиме само аналитички колачиња за подобрување
-            на страницата. Не собираме лични податоци.
+            {t("cookie_banner.text")}
+         
           </p>
           <div className={classes.cookiesActions}>
             <Link to="/cookies" className={classes.cookiesMoreInfoLink}>
-              Повеќе информации
+              {t("cookie_banner.info")}
             </Link>
-            <button onClick={handleAccept}>Прифати</button>
+            <button onClick={handleAccept}>{t("cookie_banner.accept")}</button>
           </div>
         </motion.div>
       )}
