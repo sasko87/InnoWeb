@@ -58,8 +58,43 @@ const sendContactMail = async (req, res) => {
   }
 };
 
+app.get("/sitemap.xml", (req, res) => {
+  res.header("Content-Type", "application/xml");
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://innoweb.mk/</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <priority>1.0</priority>
+      </url>
+      <url>
+        <loc>https://innoweb.mk/about</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://innoweb.mk/contact</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <priority>0.6</priority>
+      </url>
+    </urlset>`;
+  res.send(sitemap);
+});
+
+// ✅ robots.txt route (optional but safer)
+app.get("/robots.txt", (req, res) => {
+  res.type("text/plain");
+  res.send(`User-agent: *
+Allow: /
+Sitemap: https://innoweb.mk/sitemap.xml`);
+});
+
+
 app.get('/:page', (req, res) => res.sendFile(path.join(__dirname, 'dist', 'index.html')));
 app.post("/api/send-mail", sendContactMail);
+
+
+
 
 // AI Chatbot implementation
 // const server = http.createServer(app);
