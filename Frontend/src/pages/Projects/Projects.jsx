@@ -239,6 +239,12 @@ const Projects = () => {
                 whileHover={
                   offset === 0 ? { scale: 1.3, y: -15, transition: spring } : {}
                 }
+                whileTap={offset === 0 ? { scale: 1.1 } : {}}
+                style={{
+                  zIndex: style.zIndex,
+                  pointerEvents: offset === 0 ? "auto" : "none",
+                  cursor: offset === 0 ? "pointer" : "default",
+                }}
               >
                 <div className={classes.monitorWrapper}>
                   <img
