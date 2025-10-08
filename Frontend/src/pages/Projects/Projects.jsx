@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import Subtitle from "../../components/Subtitle/Subtitle";
 
 const projectImages = import.meta.glob(
-  "../../assets/projects/*.{jpg,jpeg,webp}",
+  "/src/assets/projects/*.{jpg,jpeg,webp}",
   { eager: true }
 );
 
@@ -21,12 +21,6 @@ const projectLinks = {
   "project7.webp": "https://ecommercewebsite-flame.vercel.app/",
   "project8.webp": "https://mentor-token.stevkovski.xyz/",
   "project9.webp": "https://coffe-shop-sigma-seven.vercel.app/",
-  "project10.webp": "https://ecommercewebsite-flame.vercel.app/",
-  "project11.webp": "https://mentor-token.stevkovski.xyz/",
-  "project12.webp": "https://coffe-shop-sigma-seven.vercel.app/",
-  "project13.webp": "https://ecommercewebsite-flame.vercel.app/",
-  "project14.webp": "https://mentor-token.stevkovski.xyz/",
-  "project15.webp": "https://coffe-shop-sigma-seven.vercel.app/",
 };
 
 const spring = { type: "spring", stiffness: 120, damping: 18 };
