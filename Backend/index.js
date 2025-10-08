@@ -67,16 +67,6 @@ app.get("/sitemap.xml", (req, res) => {
         <lastmod>${new Date().toISOString()}</lastmod>
         <priority>1.0</priority>
       </url>
-      <url>
-        <loc>https://innoweb.mk/about</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <priority>0.8</priority>
-      </url>
-      <url>
-        <loc>https://innoweb.mk/contact</loc>
-        <lastmod>${new Date().toISOString()}</lastmod>
-        <priority>0.6</priority>
-      </url>
     </urlset>`;
   res.send(sitemap);
 });
