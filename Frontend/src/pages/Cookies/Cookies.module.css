@@ -1,0 +1,23 @@
+h5 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.cookiesPageContainer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cookiesContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cookiesGoogleLink {
+    color: var(--primary-color);
+    text-decoration: none;
+}

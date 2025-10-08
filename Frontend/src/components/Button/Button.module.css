@@ -7,7 +7,7 @@ button {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+padding: 0.5rem;
   line-height: 100%;
   letter-spacing: 0%;
 }

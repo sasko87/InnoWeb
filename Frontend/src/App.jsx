@@ -9,6 +9,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import Background from "../Background/Background3";
 import Loader from "./components/Loader/Loader";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Cookies from "./pages/Cookies/Cookies";
+import CookieBanner from "./components/CookiesBanner/CookiesBanner";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -31,10 +33,13 @@ function App() {
 
         <div>
           <Header />
+          <CookieBanner />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<ErrorPage />} />
+            <Route path="/cookies" element={<Cookies />} />
+
           </Routes>
           <Footer />
         </div>
