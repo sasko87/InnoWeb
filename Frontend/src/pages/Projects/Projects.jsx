@@ -5,34 +5,55 @@ import classes from "./Projects.module.css";
 import monitor from "../../assets/monitor.webp";
 import { useTranslation } from "react-i18next";
 import Subtitle from "../../components/Subtitle/Subtitle";
+import project1 from "../../assets/projects/project1.webp";
+import project2 from "../../assets/projects/project2.webp";
+import project3 from "../../assets/projects/project3.webp";
+import project4 from "../../assets/projects/project4.webp";
+import project5 from "../../assets/projects/project5.webp";
+import project6 from "../../assets/projects/project6.webp";
+import project7 from "../../assets/projects/project7.webp";
+import project8 from "../../assets/projects/project8.webp";
+import project9 from "../../assets/projects/project9.webp";
 
-const projectImages = import.meta.glob(
-  "/src/assets/projects/*.{jpg,jpeg,webp}",
-  { eager: true }
-);
+// const projectImages = import.meta.glob(
+//   "/src/assets/projects/*.{jpg,jpeg,webp}",
+//   { eager: true }
+// );
 
-const projectLinks = {
-  "project1.webp": "https://wvp.mk/index.html",
-  "project2.webp": "https://mat-trans.mk",
-  "project3.webp": "https://baumarket.mk",
-  "project4.webp": "https://stevkovski.xyz/",
-  "project5.webp": "https://chat.stevkovski.xyz/login",
-  "project6.webp": "https://ecommercewebsite-flame.vercel.app/",
-  "project7.webp": "https://ecommercewebsite-flame.vercel.app/",
-  "project8.webp": "https://mentor-token.stevkovski.xyz/",
-  "project9.webp": "https://coffe-shop-sigma-seven.vercel.app/",
-};
+const projectImages = [
+  { img: project1, url: "https://wvp.mk/index.html" },
+  { img: project2, url: "https://mat-trans.mk" },
+  { img: project3, url: "https://baumarket.mk" },
+  { img: project4, url: "https://stevkovski.xyz/" },
+  { img: project5, url: "https://chat.stevkovski.xyz/login" },
+  { img: project6, url: "https://ecommercewebsite-flame.vercel.app/" },
+  { img: project7, url: "https://ecommercewebsite-flame.vercel.app/" },
+  { img: project8, url: "https://mentor-token.stevkovski.xyz/" },
+  { img: project9, url: "https://coffe-shop-sigma-seven.vercel.app/" },
+];
+
+// const projectLinks = {
+//   "project1.webp": "https://wvp.mk/index.html",
+//   "project2.webp": "https://mat-trans.mk",
+//   "project3.webp": "https://baumarket.mk",
+//   "project4.webp": "https://stevkovski.xyz/",
+//   "project5.webp": "https://chat.stevkovski.xyz/login",
+//   "project6.webp": "https://ecommercewebsite-flame.vercel.app/",
+//   "project7.webp": "https://ecommercewebsite-flame.vercel.app/",
+//   "project8.webp": "https://mentor-token.stevkovski.xyz/",
+//   "project9.webp": "https://coffe-shop-sigma-seven.vercel.app/",
+// };
 
 const spring = { type: "spring", stiffness: 120, damping: 18 };
 
 const Projects = () => {
   const { t } = useTranslation();
-
-  const projects = Object.values(projectImages).map((imgObj) => {
-    const img = imgObj.default;
-    const fileName = img.split("/").pop();
-    return { img, url: projectLinks[fileName] || "#" };
-  });
+  const projects = projectImages;
+  // const projects = Object.values(projectImages).map((imgObj) => {
+  //   const img = imgObj.default;
+  //   const fileName = img.split("/").pop();
+  //   return { img, url: projectLinks[fileName] || "#" };
+  // });
 
   const chunked = [];
   for (let i = 0; i < projects.length; i += 6) {
