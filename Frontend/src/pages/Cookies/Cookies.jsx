@@ -1,22 +1,24 @@
 import classes from "./Cookies.module.css";
+import { useTranslation } from "react-i18next";
 
 const Cookies = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={classes.cookiesPageContainer}>
-      <h2>Политика за колачиња</h2>
-      <p style={{textAlign: "center"}}>Оваа веб-страна користи минимален број колачиња со цел подобрување на корисничкото искуство и анализа на сообраќајот.</p>
+      <h2>{t("cookies.cookies_title")}</h2>
+      <p style={{textAlign: "center"}}>{t("cookies.cookies_intro")}</p>
       <div className={
 classes.cookiesContent
       }>
-      <h5>Што се колачиња?</h5>
-      <p>Колачињата се мали текстуални датотеки кои се зачувуваат на вашиот уред (компјутер, таблет, мобилен телефон) кога посетувате веб-страна. Тие овозможуваат препознавање на вашиот уред и помагаат веб-страницата да функционира подобро.</p>
-      <h5>Кои колачиња ги користиме?</h5>
-      <p>Оваа веб-страна користи само колачиња од Google Analytics, со цел да собере анонимни информации за тоа како посетителите ја користат страницата – на пример: колку луѓе ја посетуваат, кои страници се најпосетени и слично.
-Овие информации ни помагаат да ја подобриме содржината и корисничкото искуство.</p>
-      <h5>Контрола на колачињата</h5>
-      <p>Доколку не сакате вашите податоци да се користат од страна на Google Analytics, можете да ја исклучите оваа можност преку:</p>
-      <p><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" className={classes.cookiesGoogleLink}>Google Analytics Opt-out Browser Add-on</a></p>
-      <p>Можете исто така да ги избришете или блокирате колачињата преку поставките на вашиот интернет прелистувач.</p>
+      <h5>{t("cookies.what_are_cookies")}</h5>
+      <p>{t("cookies.what_are_cookies_text")}</p>
+      <h5>{t("cookies.which_cookies")}</h5>
+      <p>{t("cookies.which_cookies_text")}</p>
+      <h5>{t("cookies.cookie_control")}</h5>
+      <p>{t("cookies.cookie_control_text")}</p>
+      <p><a href="https://tools.google.com/dlpage/gaoptout" target="_blank" className={classes.cookiesGoogleLink}>{t("cookies.google_link_text")}</a></p>
+      <p>{t("cookies.cookie_delete_text")}</p>
       </div>
     </div>
   );

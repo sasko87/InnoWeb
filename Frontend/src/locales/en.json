@@ -192,5 +192,23 @@
       "address": "Address",
       "hours": "Business Hours"
     }
-  }
+  },
+  "cookies":{"cookies_title": "Cookie Policy",
+  "cookies_intro": "This website uses a minimal number of cookies to improve user experience and analyze traffic.",
+  "what_are_cookies": "What are cookies?",
+  "what_are_cookies_text": "Cookies are small text files stored on your device (computer, tablet, mobile phone) when you visit a website. They help recognize your device and make the site function better.",
+  "which_cookies": "Which cookies do we use?",
+  "which_cookies_text": "This website only uses Google Analytics cookies to collect anonymous information about how visitors use the site – for example: how many people visit, which pages are most visited, and similar. This helps us improve our content and user experience.",
+  "cookie_control": "Cookie control",
+  "cookie_control_text": "If you don’t want your data to be used by Google Analytics, you can disable it through:",
+  "google_link_text": "Google Analytics Opt-out Browser Add-on",
+  "cookie_delete_text": "You can also delete or block cookies through your browser settings."
+
+},
+"cookie_banner": {
+  "text": "We use only analytical cookies to improve the website. We do not collect personal data.",
+  "accept": "Accept",
+  "info": "More Info"
+}
+  
 }
