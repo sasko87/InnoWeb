@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 import Subtitle from "../../components/Subtitle/Subtitle";
 
 const projectImages = import.meta.glob(
-  "../../assets/projects/*.{jpg,jpeg,webp}",
+  "/src/assets/projects/*.{jpg,jpeg,webp}",
   { eager: true }
 );
 
