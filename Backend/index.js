@@ -1,16 +1,32 @@
 const express = require("express");
 const cors = require("cors");
+const path = require("path");
 const nodemailer = require("nodemailer");
 const app = express();
-const http = require("http");
-const { Server } = require("socket.io");
-const OpenAI = require("openai");
+// const http = require("http");
+// const { Server } = require("socket.io");
+// const OpenAI = require("openai");
 
 require("dotenv").config();
 
-
-app.use(cors());
+const allowedOrigins = [
+  "https://innoweb.mk",
+  "https://www.innoweb.mk"
+]; 
+app.use(cors({
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like Postman or server-to-server)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "dist")));
 
 const transporter = nodemailer.createTransport({
   host: process.env.HOST,
@@ -42,81 +58,107 @@ const sendContactMail = async (req, res) => {
   }
 };
 
+app.get("/sitemap.xml", (req, res) => {
+  res.header("Content-Type", "application/xml");
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://innoweb.mk/</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <priority>1.0</priority>
+      </url>
+    </urlset>`;
+  res.send(sitemap);
+});
+
+// ✅ robots.txt route (optional but safer)
+app.get("/robots.txt", (req, res) => {
+  res.type("text/plain");
+  res.send(`User-agent: *
+Allow: /
+Sitemap: https://innoweb.mk/sitemap.xml`);
+});
+
+
+app.get('/:page', (req, res) => res.sendFile(path.join(__dirname, 'dist', 'index.html')));
 app.post("/api/send-mail", sendContactMail);
 
+
+
+
 // AI Chatbot implementation
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-const io = new Server(server, {
-  cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
-});
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// const io = new Server(server, {
+//   cors: { origin: "http://localhost:3000", methods: ["GET", "POST"] },
+// });
+// const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-function buildMessages(
-  conversation = [],
-  systemPrompt = null,
-  maxMessages = 12
-) {
-  const trimmed = conversation.slice(-maxMessages);
-  const messages = [];
-  if (systemPrompt) messages.push({ role: "system", content: systemPrompt });
+// function buildMessages(
+//   conversation = [],
+//   systemPrompt = null,
+//   maxMessages = 12
+// ) {
+//   const trimmed = conversation.slice(-maxMessages);
+//   const messages = [];
+//   if (systemPrompt) messages.push({ role: "system", content: systemPrompt });
 
-  for (const m of trimmed) {
-    if (!m || !m.text) continue;
-    if (m.sender === "user") messages.push({ role: "user", content: m.text });
-    else messages.push({ role: "assistant", content: m.text });
-  }
-  return messages;
-}
+//   for (const m of trimmed) {
+//     if (!m || !m.text) continue;
+//     if (m.sender === "user") messages.push({ role: "user", content: m.text });
+//     else messages.push({ role: "assistant", content: m.text });
+//   }
+//   return messages;
+// }
 
-io.on("connection", (socket) => {
-  console.log("User connected:", socket.id);
-  socket.on("send_message", async (payload) => {
-    const requestId =
-      payload?.requestId ||
-      `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
-    try {
-      const conversation = Array.isArray(payload?.conversation)
-        ? payload.conversation
-        : [{ sender: "user", text: payload?.msg ?? "" }];
+// io.on("connection", (socket) => {
+//   console.log("User connected:", socket.id);
+//   socket.on("send_message", async (payload) => {
+//     const requestId =
+//       payload?.requestId ||
+//       `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
+//     try {
+//       const conversation = Array.isArray(payload?.conversation)
+//         ? payload.conversation
+//         : [{ sender: "user", text: payload?.msg ?? "" }];
 
-      const systemPrompt =
-        "You are a helpful assistant for 'Mentor Token' — answer clearly and concisely, provide code examples when asked, and when unsure ask clarifying questions.";
+//       const systemPrompt =
+//         "You are a helpful assistant for 'Mentor Token' — answer clearly and concisely, provide code examples when asked, and when unsure ask clarifying questions.";
 
-      const messages = buildMessages(conversation, systemPrompt, 12);
+//       const messages = buildMessages(conversation, systemPrompt, 12);
 
-      const options = payload?.options || {};
-      const response = await client.chat.completions.create({
-        model: options.model || "gpt-3.5-turbo",
-        messages,
-        temperature:
-          typeof options.temperature === "number" ? options.temperature : 0.2,
-        max_tokens:
-          typeof options.max_tokens === "number" ? options.max_tokens : 600,
-      });
+//       const options = payload?.options || {};
+//       const response = await client.chat.completions.create({
+//         model: options.model || "gpt-3.5-turbo",
+//         messages,
+//         temperature:
+//           typeof options.temperature === "number" ? options.temperature : 0.2,
+//         max_tokens:
+//           typeof options.max_tokens === "number" ? options.max_tokens : 600,
+//       });
 
-      const reply =
-        response.choices?.[0]?.message?.content ??
-        "Sorry, I couldn't generate a response.";
+//       const reply =
+//         response.choices?.[0]?.message?.content ??
+//         "Sorry, I couldn't generate a response.";
 
-      socket.emit("receive_message", { reply, requestId });
-      console.log(`Reply sent for ${requestId} to ${socket.id}`);
-    } catch (err) {
-      console.error(
-        "OpenAI error:",
-        err?.response?.data || err?.message || err
-      );
-      socket.emit("receive_message", {
-        reply: "⚠️ Error getting AI response.",
-        requestId,
-      });
-    }
-  });
+//       socket.emit("receive_message", { reply, requestId });
+//       console.log(`Reply sent for ${requestId} to ${socket.id}`);
+//     } catch (err) {
+//       console.error(
+//         "OpenAI error:",
+//         err?.response?.data || err?.message || err
+//       );
+//       socket.emit("receive_message", {
+//         reply: "⚠️ Error getting AI response.",
+//         requestId,
+//       });
+//     }
+//   });
 
-  socket.on("disconnect", () => {
-    console.log("User disconnected:", socket.id);
-  });
-});
+//   socket.on("disconnect", () => {
+//     console.log("User disconnected:", socket.id);
+//   });
+// });
 
 app.listen(3000, () => {
   console.log("server is running");

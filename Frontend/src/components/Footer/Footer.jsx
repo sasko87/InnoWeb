@@ -66,11 +66,9 @@ const Footer = () => {
                 {t("footer.contact.title")}
               </h3>
 
-              <p>{t("footer.contact.email")}: innowebmk@gmail.com</p>
+              <p>{t("footer.contact.email")}: contact@innoweb.mk</p>
 
-              <p>tel:+38977754050
-                +38978299456
-              </p>
+              <p>{t("footer.contact.phone")}: +38977754050, +38978299456</p>
               <a className={classes.socialContact} href="/contact">
                 {t("footer.contactPage")} →
               </a>

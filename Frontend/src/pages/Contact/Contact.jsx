@@ -31,7 +31,7 @@ const ContactPage = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:3000/api/send-mail", {
+      const response = await fetch("/api/send-mail", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
