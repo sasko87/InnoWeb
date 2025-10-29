@@ -145,10 +145,10 @@ const ContactPage = () => {
 
         <div className={classes.info}>
           <p>
-            <strong>{t("contact.info.email")}:</strong> contact@yourcompany.com
+            <strong>{t("contact.info.email")}:</strong> contact@innoweb.mk
           </p>
           <p>
-            <strong>{t("contact.info.phone")}:</strong> +389 70 123 456
+            <strong>{t("contact.info.phone")}:</strong> +389 77 754 050  +389 78 693 360 
           </p>
           <p>
             <strong>{t("contact.info.address")}:</strong> Skopje, North
